@@ -1,0 +1,279 @@
+% !TeX document-id = {0be8c18c-9430-4e9a-bdd9-12beadebfebc}
+% !TeX TXS-program:bibliography = txs:///biber
+\documentclass[11pt]{beamer}
+\uselanguage{portuguese}
+\languagepath{portuguese}
+\deftranslation[to=portuguese]{Theorem}{Teorema}
+\deftranslation[to=portuguese]{theorem}{teorema}
+\deftranslation[to=portuguese]{Example}{Exemplo}
+\deftranslation[to=portuguese]{example}{exemplo}
+\deftranslation[to=portuguese]{Lemma}{Lema}
+\deftranslation[to=portuguese]{lemma}{Lema}
+\deftranslation[to=portuguese]{Corollary}{Corolário}
+\deftranslation[to=portuguese]{corollary}{corolário}
+%\deftranslation[to=portuguese]{and}{e}
+
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+%\usepackage{appendixnumberbeamer}
+
+\newenvironment{transitionframe}{
+	\setbeamercolor{background canvas}{bg=yellow}
+	\begin{frame}}{
+	\end{frame}
+}
+\usetheme{default}
+\usefonttheme{structuresmallcapsserif}
+
+%% I use a beige off white for my background
+\definecolor{MyBackground}{RGB}{255,253,218}
+\useinnertheme[shadow]{rounded}
+\setbeamercolor{block title}{bg=MyBackground}
+\setbeamercolor{block body}{bg=MyBackground}
+\setbeamercolor{example title}{bg=MyBackground}
+\setbeamercolor{example body}{bg=MyBackground}
+
+
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{page number in head/foot}[appendixframenumber]
+
+%\usepackage{graphics}
+\usepackage{graphicx}
+
+\definecolor{blue_emph}{RGB}{0,114,178}
+\definecolor{red}{RGB}{213,94,0}
+\definecolor{yellow}{RGB}{240,228,66}
+\definecolor{green}{RGB}{0,158,115}
+\definecolor{purple}{RGB}{204,121,167}
+\definecolor{orange}{RGB}{230,159,0}
+\definecolor{lightblue}{RGB}{86,180,233}
+
+%\setbeamercolor{frametitle}{fg=blue}
+%\setbeamercolor{title}{fg=blue}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{itemize items}{-}
+%\setbeamercolor{itemize item}{fg=blue}
+%\setbeamercolor{itemize subitem}{fg=blue}
+\setbeamertemplate{enumerate items}[default]
+%\setbeamercolor{enumerate subitem}{fg=blue}
+\setbeamercolor{button}{bg=MyBackground,fg=blue}
+\usefonttheme{structuresmallcapsserif}
+
+%\setbeamercolor{section in toc}{fg=blue}
+%\setbeamercolor{subsection in toc}{fg=red}
+\setbeamersize{text margin left=1em,text margin right=1em} 
+
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage[
+backend=biber,
+style=authoryear,
+natbib=true
+]{biblatex}
+\addbibresource{../bibliography.bib}
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+\newenvironment{wideenumerate}{\enumerate\addtolength{\itemsep}{10pt}}{\endenumerate}
+\newenvironment{halfwideitemize}{\itemize\addtolength{\itemsep}{0.5em}}{\enditemize}
+\newenvironment{halfwideenumerate}{\enumerate\addtolength{\itemsep}{0.5em}}{\endenumerate}
+
+
+\author{Luis A. F. Alvarez}
+\title{Introdução à Econometria Semiparamétrica}
+\subtitle{Aula 1 - Estimação Não Paramétrica Moderna}
+%\logo{}
+%\institute{}
+\date{\today}
+%\subject{}
+%\setbeamercovered{transparent}
+
+\begin{document}
+
+	\begin{frame}[plain]
+	\maketitle
+	\end{frame}
+	\begin{frame}{Estimando uma densidade}
+		\begin{halfwideitemize}
+			\item Suponha que você, pesquisador, possui uma amostra aleatória $\{X_i\}_{i=1}^n$ de uma distribuição contínua $F$, cuja densidade denotamos por $f$.
+			\begin{itemize}
+				\item Por exemplo, você possui dados da riqueza não financeira de uma amostra de indivíduos.
+			\end{itemize}
+			\item Você está interessado em estimar a densidade $f$.
+			\item Como você pode fazer isso?
+		\end{halfwideitemize}
+	\end{frame}
+	
+	\begin{frame}{Estimação paramétrica}
+		\begin{itemize}
+			\item Um caminho consiste em realizar uma {\color{blue}hipótese de forma funcional} acerca de $f$.
+			\item Por exemplo, se nossa população de interesse está restrita à cauda superior da distribuição de riqueza, a literatura sugere que deve valer a ``lei de Pareto'' \citep{benhabib2018skewed}, segundo a qual:
+			$$f(x) = g(x|x_0,\alpha) = \alpha \frac{x_0^{\alpha}}{x^{\alpha+1}}\mathbf{1}\{x\geq x_0\}, \quad x_0,\alpha>0$$
+			 \begin{itemize}
+			 	\item Distribuição compatível com modelos de agentes heterogêneos com mercados incompletos e ativos arriscados \citep{achdou2022income}.
+			 \end{itemize}
+			 \item Sob a hipótese de forma funcional, a estimação de $f$ se resume à estimação de dois parâmetros, $(x_0,\alpha)\in \mathbb{R}^2$.
+			 \item Por exemplo, podemos estimá-los através de máxima verossimilhança:
+			 $$(\hat x_0, \hat \alpha) \in \operatorname{argmax}_{(z,a)\in \mathbb{R}^2} \frac{1}{n}\sum_{i=1}^n \log g(X_i|z,a)$$
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Forma funcional e estimação não paramétrica}
+		\begin{itemize}
+			\item E se a lei de Pareto não for válida?
+			\begin{itemize}
+				\item Nesse caso, a densidade estimada não recuperará a distribuição correta, mesmo em amostras grandes.
+			\end{itemize}
+			\item Como podemos estimar a distribuição correta sem requerer a hipótese de forma funcional?
+			\item Para isso, necessitamos de métodos {\color{blue}não paramétricos}, que dispensem da hipótese de forma funcional.
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Histograma}
+		\begin{itemize}
+			\item O estimador não paramétrico mais simples é o histograma.
+			\item Em um histograma, o suporte da distribuição é dividio em $J$ células (\textit{bins}) de comprimento $2h$, e a densidade para os pontos na $j$-ésima célula, $[a_j,b_j)$, é estimada como constante igual a:
+			
+			$$\hat{f}_h(x_j) = \frac{1}{n2h}\sum_{i=1}^n \mathbf{1}\left\{|X_i-x_j|\leq h\right\}\,,$$ 
+			onde o $x_j = \frac{a_j+b_j}{2}$  é o ponto intermediário da célula $j$.
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Estimador de \textit{kernel} para densidade}
+		\begin{itemize}
+			\item O estimador $\hat{f}_h(x_j)$ usado na construção do histograma é um caso particular de um {\color{blue}estimador de \textit{kernel}} para uma densidade em um ponto $x$, que é dado por:
+			
+			$$\hat{f}_h(x) = \frac{1}{nh}\sum_{j=1}^n K\left(\frac{X_j - x}{h}\right) \, ,$$
+			onde $K:\mathbb{R}\mapsto \mathbb{R}$ é um \textit{kernel}, i.e. uma função satisfazendo $\int_{-\infty}^\infty K(u) du = 1$ e simétrica em torno do zero, $K(u) = K(-u)$.
+			\item No que segue, vamos supor que $K$ é uma função não negativa com suporte no intervalo $[-1,1]$, embora essas hipóteses não sejam necessárias para a maioria dos resultados.
+			\item Sob a hipótese anterior, estimador de \textit{kernel} propõe estimar $f(x)$ ``contando'' os pontos da amostra com distância a menos de $h$ de $x$. $K$ nos dá então o peso relativo de cada ponto dentro de essa região.
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Exemplos de \textit{kernel}}
+		\begin{table}[h!]
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				\textbf{\textit{Kernel}}         & \textbf{Fórmula}                                      \\ \hline
+				\textbf{Uniforme}        & $K(u) = \frac{1}{2} \cdot \mathbf{1}(|u| \leq 1)$     \\ \hline
+				\textbf{Triangular}     & $K(u) = (1 - |u|) \cdot \mathbf{1}(|u| \leq 1)$       \\ \hline
+				\textbf{Epanechnikov}   & $K(u) = \frac{3}{4}(1 - u^2) \cdot \mathbf{1}(|u| \leq 1)$ \\ \hline
+			\end{tabular}
+		\end{table}
+	
+	\end{frame}
+	\begin{frame}{Exemplos de \textit{kernel}}
+		\centering 
+			\begin{tikzpicture}
+			\begin{axis}[
+				title={Funções \textit{Kernel}},
+				xlabel={$u$},
+				ylabel={$K(u)$},
+				grid=major,
+				legend pos=north west,
+				 legend style={font=\fontsize{6}{6}\selectfont},
+				axis lines=middle,
+				xmin=-1.5, xmax=1.5, 
+				ymin=0, ymax=1,
+				samples=100
+				]
+				% Uniform Kernel
+				\addplot[domain=-1:1, blue, thick] {0.5};
+				\addlegendentry{Uniforme}
+				
+				% Triangular Kernel
+				\addplot[domain=-1:1, green, thick] {1 - abs(x)};
+				\addlegendentry{Triangular}
+				
+				% Epanechnikov Kernel
+				\addplot[domain=-1:1, red, thick] {0.75*(1 - x^2)};
+				\addlegendentry{Epanechnikov}
+				
+			\end{axis}
+		\end{tikzpicture}
+	\end{frame}
+	
+	\begin{frame}{Calculando o viés do estimador de \textit{kernel}}
+		\begin{itemize}
+			\item Vamos analisar as propriedades estatísticas do estimador de \textit{kernel}.
+			
+			\item Considere um ponto $x$ do suporte da distribuição tal que $f(\cdot)$ seja duas vezes continuamente diferenciável numa vizinhança de $x$. Neste caso, temos que, à medida que $h \to 0$:
+			\begin{equation*}
+				\begin{aligned}
+					\mathbb{E}[\hat{f}_h(x)] = \frac{1}{nh} \sum_{i=1}^n\mathbb{E}\left[K\left(\frac{X_i - x}{h}\right)\right] = \frac{1}{h}\mathbb{E}\left[K\left(\frac{X_1 - x}{h}\right)\right] = \\
+				 \frac{1}{h}\int_{x - h}^{x+h} K\left(\frac{s-x}{h}\right) f(s) ds \overset{u = \frac{s-x}{h}}{=}	\int_{-1}^{1} K(u) f(x+hu) du = \\
+					f(x)\underbrace{\int_{-1}^{-1}K(u)du}_{=1} + f'(x) h \underbrace{\int_{-1}^{-1}uK(u)du}_{=0} + \int_{-1}^1 (uh)^2 f''(\tilde{x}_{hu}) K(u) du = \\
+					f(x) +h^2 f''(x) \int_{-1}^{1} u^2 K(u) du + o(h^2)  
+				\end{aligned}
+			\end{equation*}
+			onde, da segunda para a terceira linha, aplicamos o teorema do valor médio de segunda ordem, e a última passagem usa continuidade (uniforme) da segunda derivada numa vizinhança de $x$.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Calculando a variância do estimador de \textit{kernel}}
+		\begin{itemize}
+			\item Do mesmo modo:
+			$$		\mathbb{V}[\hat{f}_h(x)] = \frac{1}{nh^2}\mathbb{V}\left[K\left(\frac{X_1 - X}{h}\right)\right]$$
+			\item Mas:
+			$$\mathbb{E}\left[K\left(\frac{X_1 - X}{h}\right)^2\right] = h \int_{-1}^{1} f(x) K^2(u) du + O(h^3)$$
+			e$$\mathbb{E}\left[K\left(\frac{X_1 - X}{h}\right)\right]^2 = h^2f(x)^2  + O(h^3)$$
+			\item De modo que:
+			$$\mathbb{V}[\hat{f}_h(x)] = \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + O\left(\frac{h}{n}\right)$$		
+		\end{itemize}
+		
+
+	\end{frame}
+	\begin{frame}{Erro quadrático médio do estimador de \textit{kernel}}
+		\begin{itemize}
+			\item Combinando os pontos anteriores, temos que:
+			\begin{equation*}
+				\begin{aligned}
+					\operatorname{EQM}[\hat{f}_h(x)] = \mathbb{E}[(\hat{f}_h(x) - f(x))^2] = \\ 
+					h^4 f''(x)^2 \left(\int_{-1}^{1}u^2 K(u)du\right)^2 + \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + o(1)
+				\end{aligned}
+			\end{equation*}
+			\item Portanto, se $n \to \infty$ com $h\to 0$ e $nh \to \infty$.
+			$$\operatorname{EQM}[\hat{f}_h(x)] \to 0\, ,$$
+			e o estimador de kernel é \textit{consistente}.
+			\item Além disso, da expressão acima escolha $h$ ótima, que balanceia \textit{trade-off} viés-variância,  é dada por:
+			$$h \propto n^{-1/5} $$ 
+			
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Estimação de densidades multidimensionais}
+		\begin{itemize}
+			\item O estimador anteriormente introduzido é facilmente extensível para a estimação de uma densidade em $\mathbb{R}^d$. Seja $\boldsymbol{f}$ uma densidade em $\mathbb{R}^d$, e $\{\boldsymbol{X}_i\}_{i=1}^n$ uma amostra aleatória desta distribuição. Podemos estimar $\boldsymbol{f}(\boldsymbol{x})$ como:
+			
+			$$\hat{\boldsymbol{f}}_{\boldsymbol{h}}(x) = \frac{1}{nh_1\ldots h_d}\sum_{i=1}^n \boldsymbol{K}_{\boldsymbol{h}}\left(\boldsymbol{X}_i - \boldsymbol{x}\right)$$
+			onde $\boldsymbol{K}_{\boldsymbol{h}}(\boldsymbol{u}) =\prod_{j=1}^d K(u_j/h_j)$, com $K$ um \textit{kernel} univariado.
+			\item Nesse caso, viés é proporcional da ordem de $d \max_j h^2_j$ e variância a $\frac{1}{nh_1\ldots h_d}$. Portanto, se:
+			
+			$$\max_j h_j \to 0,\quad  nh_1\ldots h_d \to \infty \, ,$$
+			estimador é consistente.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Estimador de Nadaraya-Watson para a esperança condicional}
+		\begin{itemize}
+			\item A lógica do estimador anterior pode ser 
+		\end{itemize}
+	\end{frame}
+	
+		\begin{frame}[allowframebreaks]{Bibliografia}
+	\printbibliography
+
+	\end{frame}
+
+\end{document}
+
