@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.1)  7 OCT 2024 13:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.1)  7 OCT 2024 13:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1770,51 +1770,41 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \openout9 = `slides.snm'.
 
  (./slides.aux)
-
-Package rerunfilecheck Warning: File `slides.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `slides.out':
-(rerunfilecheck)             Before: 72369A70582F08AEEDC45B9D0750298C;101
-(rerunfilecheck)             After:  93AAE74C7C9D177DFE421A3AFA5CD24D;193.
+Package rerunfilecheck Info: File `slides.out' has not changed.
+(rerunfilecheck)             Checksum: 93AAE74C7C9D177DFE421A3AFA5CD24D;193.
 Package logreq Info: Writing requests to 'slides.run.xml'.
 \openout1 = `slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44913 strings out of 476025
- 1043788 string characters out of 5790017
+ 44921 strings out of 476025
+ 1043852 string characters out of 5790017
  1870388 words of memory out of 5000000
- 64504 multiletter control sequences out of 15000+600000
+ 64513 multiletter control sequences out of 15000+600000
  643654 words of font info for 116 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,18n,122p,1796b,2203s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Outline0.1} has been referenced but does not exist,
- replaced by a fixed one
-
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/loc
-al/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsco10.pfb></usr/local/texli
-ve/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/te
-xmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist/f
-onts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/
-public/lm/lmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/
-lmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbo10.pf
-b></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/tex
-live/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/local/texlive/2023/
-texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-dist
-/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
-1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm
-/lmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
-></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
-bm7.pfb>
-Output written on slides.pdf (34 pages, 338930 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/l
+ocal/texlive/2023/texmf-dist/fonts/type1/public/lm/lmcsco10.pfb></usr/local/tex
+live/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2023/
+texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2023/texmf-dist
+/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type
+1/public/lm/lmss10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/l
+m/lmss8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbo10.
+pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></us
+r/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/t
+exlive/2023/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/local/texlive/202
+3/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2023/texmf-di
+st/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/ty
+pe1/public/lm/lmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/
+lm/lmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.p
+fb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/
+msbm7.pfb>
+Output written on slides.pdf (34 pages, 338982 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 87 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 381 PDF objects out of 1000 (max. 8388607)
+ 295 compressed objects within 3 object streams
+ 86 named destinations out of 1000 (max. 500000)
+ 59 words of extra memory for PDF output out of 10000 (max. 10000000)
 
