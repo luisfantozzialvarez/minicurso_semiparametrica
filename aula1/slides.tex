@@ -213,8 +213,8 @@ natbib=true
 				\begin{aligned}
 					\mathbb{E}[\hat{f}_h(x)] = \frac{1}{nh} \sum_{i=1}^n\mathbb{E}\left[K\left(\frac{X_i - x}{h}\right)\right] = \frac{1}{h}\mathbb{E}\left[K\left(\frac{X_1 - x}{h}\right)\right] = \\
 				 \frac{1}{h}\int_{x - h}^{x+h} K\left(\frac{s-x}{h}\right) f(s) ds \overset{u = \frac{s-x}{h}}{=}	\int_{-1}^{1} K(u) f(x+hu) du = \\
-					f(x)\underbrace{\int_{-1}^{-1}K(u)du}_{=1} + f'(x) h \underbrace{\int_{-1}^{-1}uK(u)du}_{=0} + \int_{-1}^1 (uh)^2 f''(\tilde{x}_{hu}) K(u) du = \\
-					f(x) +h^2 f''(x) \int_{-1}^{1} u^2 K(u) du + o(h^2)  
+					f(x)\underbrace{\int_{-1}^{-1}K(u)du}_{=1} + f'(x) h \underbrace{\int_{-1}^{-1}uK(u)du}_{=0} + \int_{-1}^1 (uh)^2 \frac{f''(\tilde{x}_{hu})}{2} K(u) du = \\
+					f(x) +\frac{h^2}{2} f''(x) \int_{-1}^{1} u^2 K(u) du + o(h^2)  
 				\end{aligned}
 			\end{equation*}
 			onde, da segunda para a terceira linha, aplicamos o teorema do valor médio de segunda ordem, e a última passagem usa continuidade (uniforme) da segunda derivada numa vizinhança de $x$.
@@ -229,7 +229,7 @@ natbib=true
 			$$\mathbb{E}\left[K\left(\frac{X_1 - X}{h}\right)^2\right] = h \int_{-1}^{1} f(x) K^2(u) du + O(h^3)$$
 			e$$\mathbb{E}\left[K\left(\frac{X_1 - X}{h}\right)\right]^2 = h^2f(x)^2  + O(h^3)$$
 			\item De modo que:
-			$$\mathbb{V}[\hat{f}_h(x)] = \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + O\left(\frac{h}{n}\right)$$		
+			$$\mathbb{V}[\hat{f}_h(x)] = \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + \underbrace{O\left(\frac{h}{n}\right)}_{=o\left(\frac{1}{nh}\right)}$$		
 		\end{itemize}
 		
 
@@ -267,7 +267,7 @@ natbib=true
 	
 	\begin{frame}{Estimador Nadaraya-Watson para a esperança condicional}
 		\begin{itemize}
-			\item A lógica do estimador anterior pode ser estendida para, dada uma amostra aleatória $\{(Y_i,X_i)\}_{i=1}^n$ de  $(Y,X)$, estimar-se a função de esperança condicional $m(X) = \mathbb{E}[Y|X=x]$ num ponto ${x}$.
+			\item A lógica do estimador anterior pode ser estendida para, dada uma amostra aleatória $\{(Y_i,X_i)\}_{i=1}^n$ de  $(Y,X)$, estimar-se a função de esperança condicional $m(X) = \mathbb{E}[Y|X]$ num ponto ${x}$.
 			\item Nesse caso, podemos tomar médias locais, dadas pelo estimador de {\color{blue}Nadaraya-Watson}:
 			$$\small \hat{m}(x) = \frac{\sum_{i=1}^n K\left( (X_i-x)/h\right) Y_i}{\sum_{i=1}^n K\left((X_i-x)/h \right)}$$
 			
@@ -276,7 +276,7 @@ natbib=true
 	\begin{frame}{Viés e variância do estimador de Nadaraya-Watson}
 		\begin{itemize}
 			\item 	Para uma $m$ duas vezes continuamente diferenciável numa vizinhança de ${x}$, com densidade $f$ positiva e continuamente diferenciável numa vizinhança de ${x}$, temos, se $n\to \infty$ e $nh\to \infty$
-			$$\small \text{Vi\'{e}s}(\hat{m}(x)) = \left(\frac{1}{2} m^{\prime \prime}(x)+\frac{m^{\prime}(x) f^{\prime}(x)}{f(x)}\right) \int_{-\infty}^{\infty} u^{2} K(u) d u h^{2} + o(h^2)$$
+			$$\small \text{Vi\'{e}s}(\hat{m}(x)) = h^{2}\left(\frac{1}{2} m^{\prime \prime}(x)+\frac{m^{\prime}(x) f^{\prime}(x)}{f(x)}\right) \int_{-\infty}^{\infty} u^{2} K(u) d u  + o(h^2)$$
 			$$\mathbb{V}(\hat{m}(x)) = \frac{\sigma^{2}(x)}{f(x) n h} \int_{-\infty}^{\infty} K^{2}(u) d u + o\left(\frac{1}{nh}\right)$$
 			onde $\sigma^2(X) = \mathbb{V}[Y|X]$.
 			\item Estimador é consistente para $m(x)$ se $n\to \infty$, $h\to 0$ e $nh\to \infty$.
@@ -375,7 +375,7 @@ natbib=true
 	\begin{frame}{Viés e variância da regressão linear local e ajuste automático à fronteira}
 	\begin{itemize}
 		\item Sob as mesmas condições do estimador de Nadaraya-Watson, o estimador $\tilde{m}(x)$ satisfaz, para os pontos interiores do suporte de $X$.
-			$$\small \text{Vi\'{e}s}(\tilde{m}(x)) = \frac{1}{2} m^{\prime \prime}(x) \int_{-\infty}^{\infty} u^{2} K(u) d u h^{2}+ o(h^2)$$
+			$$\small \text{Vi\'{e}s}(\tilde{m}(x)) = \frac{h^{2}}{2} m^{\prime \prime}(x)  \int_{-\infty}^{\infty} u^{2} K(u) d u + o(h^2)$$
 	$$\mathbb{V}(\tilde{m}(x)) = \frac{\sigma^{2}(x)}{f(x) n h} \int_{-\infty}^{\infty} K^{2}(u) d u + o\left(\frac{1}{nh}\right)$$
 	\item Ademais, uma fórmula análoga (com as mesmas taxas), vale para os pontos de fronteira do suporte \citep[Teorema 3.3]{Fan1996}.
 	\item Banda ótima em termos de erro quadrático médio é dada por $h_n \propto n^{-1/5}$ 
@@ -399,12 +399,12 @@ natbib=true
 	\begin{frame}{Alternativas inferenciais}
 	\begin{itemize}
 		\item \citet{calonico2014robust}, \citet{calonico2018effect,calonico2022coverage}: estime $\text{Vi\'{e}s}(\tilde{m}(x))$ e ajuste erro padrão pela incerteza desta etapa, considerando o intervalo de confiança:
-		 $$\tilde{m}(x) \pm z_{1- \alpha/2}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) +\text{Vi\'{e}s}(\tilde{m}(x))]}},\,,$$
+		 $$\tilde{m}(x) - \widehat{\text{Vi\'{e}s}(\tilde{m}(x))} \pm z_{1- \alpha/2}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) +\widehat{\text{Vi\'{e}s}(\tilde{m}(x))}]}},\,,$$
 		 \item \citet{armstrong2020simple}: considere o intervalo de confiança
-		 	 $$\tilde{m}(x)- \widehat{\text{Vi\'{e}s}(\tilde{m}(x))} \pm {\color{red}c_{1- \alpha/2}(M)}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) +\text{Vi\'{e}s}(\tilde{m}(x))]}},\,,$$
-		 	 onde $c_q(M)$ incorpora o efeito do pior viés possível, numa classe de funções ``suaves'', com parâmetro de suavidade $M$, sobre o valor crítico.
+		 	 $$\tilde{m}(x) \pm {\color{red}c_{1- \alpha/2}(M)}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) ]}},\,,$$
+		 	 onde o valor crítico ajustado $c_q(M)$ incorpora o efeito do pior viés possível, numa classe de funções ``suaves'', com parâmetro de suavidade $M$, sobre o valor crítico.
 		 	 \begin{itemize}
-		 	 	\item Intervalos \textit{undersmothened} ou corrigidos por viés podem ser vistos como escolhendo um $M$ implicitamente.
+		 	 	\item Intervalos \textit{undersmothened} ou corrigidos por viés podem ser vistos como escolhendo um $M$ implicitamente e, nesse caso, construindo um intervalo de maior comprimento.´
 		 	 \end{itemize}
 	\end{itemize}
 	\end{frame}
@@ -416,6 +416,7 @@ natbib=true
 			\item \citet{Einmahl2005}: para o estimador de Nadaraya-Watson com vetor aleatório $\mathbf{X}$ em $\mathbb{R}^d$,  e para qualquer subconjunto compacto $I$ em $\mathbb{R}^d$:
 			
 			$$\sup_{\boldsymbol{x} \in I}|\hat{m}(\boldsymbol{x}) - m(\boldsymbol{x}) - \operatorname{Viés}(\hat{m}(\boldsymbol{x}))| = O_{\mathbb{P}}\left(\sqrt{\frac{ (-\sum_{j=1}^d \log(h_j)) \lor \log \log n}{{nh_1\ldots h_d}}}\right)$$ 
+			\item Para as bandas ótimas, $ h_j  \propto n^{-1/(d+4)}$, taxa é de $\sqrt{\frac{\log(n)}{n^{\frac{4}{4+d}}}}$ .
 			\item Resultados similares para dados com dependência temporal \citep{alvarez2023maximalinequalitylocalempirical}.
 		\end{itemize}
 	\end{frame}
@@ -437,7 +438,7 @@ natbib=true
 		\begin{itemize}
 			\item Recorde-se que a função esperança condicional resolve:
 			$$\min_{h \in L_2(\mathbb{P}_{\boldsymbol{X}})} \mathbb{E}[(Y-h(\boldsymbol{X}))^2]$$
-			\item Quando o suporte de $\mathcal{X}$ de $\boldsymbol{X}$ é finito e pequeno relativamente a $n$, análogo amostral do problema acima é factível, visto que $L_2(\mathbb{P}_{\boldsymbol{X}}) = \{\sum_{s \in \mathcal{X}} a_s \mathbf{1}\{x = s\}: (a_s)_{s\in \mathcal{X}} \in \mathbb{R}^{\mathcal{X}}\}$.
+			\item Quando o suporte $\mathcal{X}$ de $\boldsymbol{X}$ é finito e pequeno relativamente a $n$, análogo amostral do problema acima é factível, visto que $L_2(\mathbb{P}_{\boldsymbol{X}}) = \{\sum_{s \in \mathcal{X}} a_s \mathbf{1}\{x = s\}: (a_s)_{s\in \mathcal{X}} \in \mathbb{R}^{\mathcal{X}}\}$.
 			\begin{itemize}
 				\item Regressão ``saturada'', com indicadores de todos os pontos do suporte, é um estimador não paramétrico factível de $\mathbb{E}[Y|\boldsymbol{X}]$.
 			\end{itemize}
