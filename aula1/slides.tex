@@ -95,7 +95,7 @@ natbib=true
 
 \author{Luis A. F. Alvarez}
 \title{Introdução à Econometria Semiparamétrica}
-\subtitle{Aula 1 - Estimação Não Paramétrica Moderna}
+\subtitle{Aula 1 - Estimação Não Paramétrica Clássica}
 %\logo{}
 %\institute{}
 \date{\today}
@@ -238,16 +238,17 @@ natbib=true
 		\begin{itemize}
 			\item Combinando os pontos anteriores, temos que:
 			\begin{equation*}
+				\small 
 				\begin{aligned}
 					\operatorname{EQM}[\hat{f}_h(x)] = \mathbb{E}[(\hat{f}_h(x) - f(x))^2] = \\ 
-					h^4 f''(x)^2 \left(\int_{-1}^{1}u^2 K(u)du\right)^2 + \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + o(1)
+					h^4 f''(x)^2 \left(\int_{-1}^{1}u^2 K(u)du\right)^2 + \frac{1}{nh} \int_{-1}^{1} f(x) K^2(u) du+ \frac{1}{n}f(x)^2 + o\left(\frac{1}{nh} \lor h^2\right)
 				\end{aligned}
 			\end{equation*}
 			\item Portanto, se $n \to \infty$ com $h\to 0$ e $nh \to \infty$.
 			$$\operatorname{EQM}[\hat{f}_h(x)] \to 0\, ,$$
 			e o estimador de kernel é \textit{consistente}.
 			\item Além disso, da expressão acima escolha $h$ ótima, que balanceia \textit{trade-off} viés-variância,  é dada por:
-			$$h \propto n^{-1/5} $$ 
+			$$h_n \propto n^{-1/5} $$ 
 			
 		\end{itemize}
 	\end{frame}
@@ -264,12 +265,272 @@ natbib=true
 		\end{itemize}
 	\end{frame}
 	
-	\begin{frame}{Estimador de Nadaraya-Watson para a esperança condicional}
+	\begin{frame}{Estimador Nadaraya-Watson para a esperança condicional}
 		\begin{itemize}
-			\item A lógica do estimador anterior pode ser 
+			\item A lógica do estimador anterior pode ser estendida para, dada uma amostra aleatória $\{(Y_i,X_i)\}_{i=1}^n$ de  $(Y,X)$, estimar-se a função de esperança condicional $m(X) = \mathbb{E}[Y|X=x]$ num ponto ${x}$.
+			\item Nesse caso, podemos tomar médias locais, dadas pelo estimador de {\color{blue}Nadaraya-Watson}:
+			$$\small \hat{m}(x) = \frac{\sum_{i=1}^n K\left( (X_i-x)/h\right) Y_i}{\sum_{i=1}^n K\left((X_i-x)/h \right)}$$
+			
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Viés e variância do estimador de Nadaraya-Watson}
+		\begin{itemize}
+			\item 	Para uma $m$ duas vezes continuamente diferenciável numa vizinhança de ${x}$, com densidade $f$ positiva e continuamente diferenciável numa vizinhança de ${x}$, temos, se $n\to \infty$ e $nh\to \infty$
+			$$\small \text{Vi\'{e}s}(\hat{m}(x)) = \left(\frac{1}{2} m^{\prime \prime}(x)+\frac{m^{\prime}(x) f^{\prime}(x)}{f(x)}\right) \int_{-\infty}^{\infty} u^{2} K(u) d u h^{2} + o(h^2)$$
+			$$\mathbb{V}(\hat{m}(x)) = \frac{\sigma^{2}(x)}{f(x) n h} \int_{-\infty}^{\infty} K^{2}(u) d u + o\left(\frac{1}{nh}\right)$$
+			onde $\sigma^2(X) = \mathbb{V}[Y|X]$.
+			\item Estimador é consistente para $m(x)$ se $n\to \infty$, $h\to 0$ e $nh\to \infty$.
+			\item Banda ótima em termos de erro quadrático médio é dada por:
+			$h_n \propto n^{-1/5}$
+		\end{itemize}
+
+	\end{frame}
+
+	
+	
+	\begin{frame}{Viés de fronteira}
+	\begin{itemize}
+		\item A derivação anterior pressupõe um ponto interior ao suporte de $X$,
+		\item Para pontos na fronteira do suporte, a expansão de Taylor é unilateral, de modo que haverá um componente de viés adicional em $\hat{m}(x)$.
+		\begin{itemize}
+			\item Esse componente adicional de viés tem taxa de convergência mais lenta, de $h$ e não $h^2$, e será proporcional a $m'(x)$.
+		\end{itemize}
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Visualização}
+
+    \begin{tikzpicture}
+	\begin{axis}[
+		width=10cm, height=7cm,
+		xlabel={$x$},
+		ylabel={$y$},
+		grid=both,
+		xmin=0, xmax=10,
+		ymin=0, ymax=3,
+		legend pos=south east,
+		]
+		
+		% Simulated "true" function (centered around data)
+    \addplot[domain=0:10, smooth, thick, blue] {1.5 + sin(deg(x))};
+
+		
+		
+		% Boundary area
+		\draw [fill=gray!30,draw=none] (0,0) rectangle (1,3);
+		%\node at (axis cs: 0.5, 2.5) {Boundary Bias};
+		
+		% Data points (sample, centered around true function)
+\addplot[only marks, mark=*, black] coordinates {
+	(0.25, 1.7)
+	(0.5, 1.5 + 0.479425 + 0.1) 
+	(1, 1.5 + 0.841471 - 0.2)
+	(1.5, 1.5 + 0.997495 + 0.05) 
+	(2, 1.5 + 0.909297 + 0.15)
+	(2.5, 1.5 + 0.598472 - 0.1) 
+	(3, 1.5 + 0.141120 + 0.2)
+	(3.5, 1.5 - 0.350783 - 0.05) 
+	(4, 1.5 - 0.756802 + 0.1)
+	(4.5, 1.5 - 0.958851 - 0.2) 
+	(5, 1.5 - 0.958851 + 0.05)
+	(5.5, 1.5 - 0.598472 + 0.1) 
+	(6, 1.5 + 0.141120 - 0.15)
+	(6.5, 1.5 + 0.479425 + 0.05) 
+	(7, 1.5 + 0.656986 - 0.05)
+	(7.5, 1.5 + 0.989358 + 0.2) 
+	(8, 1.5 + 0.989358 - 0.15)
+	(8.5, 1.5 + 0.479425 + 0.1) 
+	(9, 1.5 - 0.412118 - 0.1)
+	(9.5, 1.5 - 0.801144 + 0.05)
+};
+
+
+		% Bandwidth around boundary point (x = 1)
+		\draw[|-|, thick] (axis cs:0, 1.5) -- (axis cs:1,1.5);
+		%\node[below] at (axis cs: 1, 0.6) {Bandwidth at boundary};
+		
+		% Bandwidth around interior point (x = 5)
+		\draw[|-|, thick] (axis cs:2.75, 1.39) -- (axis cs:3.75, 1.39);
+		%\node[below] at (axis cs: 5, 0.8) {Bandwidth at interior};
+		\draw[-, thick, dashed, green] (axis cs:0, 1.5) -- (axis cs:1, 2.5);
+		
+		    \draw[-, thick, dashed, red] (axis cs:2.75, 1.89) -- (axis cs:3.75, 0.89);
+		
+		
+	\end{axis}
+\end{tikzpicture}
+	\end{frame}
+	
+	\begin{frame}{Regressão linear local}
+	\begin{itemize}
+		\item O estimador de Nadaraya-Watson resolve:
+	$$\hat{m}(x) = \operatorname{argmin}_{a \in \mathbb{R}} \sum_{i=1}^n K\left(\frac{X_i-x}{h}\right)(Y_i-a)^2$$
+	\item Uma expansão de Taylor $m(X_i) \approx m(x) + m'(x)(X_i-x)$, e a expressão acima sugerem a estimação de $m(x)$ como o intercepto da {\color{blue}regressão linear local}:
+	$$\min_{{\color{blue}a},b} \sum_{i=1}^n K\left(\frac{X_i-x}{h}\right)(Y_i-{\color{blue}a} - b(X_i-x))^2$$
+	\item Coeficiente associado a $(X_i-x)$ , $\hat{b}$, estima $m'(x)$, embora esse estimador não seja ``bom'' (regressão quadrática local é preferível).
+	
+	\end{itemize}
+\end{frame}
+	
+	\begin{frame}{Viés e variância da regressão linear local e ajuste automático à fronteira}
+	\begin{itemize}
+		\item Sob as mesmas condições do estimador de Nadaraya-Watson, o estimador $\tilde{m}(x)$ satisfaz, para os pontos interiores do suporte de $X$.
+			$$\small \text{Vi\'{e}s}(\tilde{m}(x)) = \frac{1}{2} m^{\prime \prime}(x) \int_{-\infty}^{\infty} u^{2} K(u) d u h^{2}+ o(h^2)$$
+	$$\mathbb{V}(\tilde{m}(x)) = \frac{\sigma^{2}(x)}{f(x) n h} \int_{-\infty}^{\infty} K^{2}(u) d u + o\left(\frac{1}{nh}\right)$$
+	\item Ademais, uma fórmula análoga (com as mesmas taxas), vale para os pontos de fronteira do suporte \citep[Teorema 3.3]{Fan1996}.
+	\item Banda ótima em termos de erro quadrático médio é dada por $h_n \propto n^{-1/5}$ 
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Inferência}
+	\begin{itemize}
+		\item Sob condições de regularidade, temos que:
+		
+		$$\sqrt{nh}\left(\frac{\tilde{m}(x) - m(x)  - \text{Vi\'{e}s}(\tilde{m}(x)) }{\sqrt{\mathbb{V}[x]}}\right) \overset{d}{\to} \mathcal{N}(0,1) \, .$$
+		\item Estimador é assintoticamente normal, embora não necessariamente seja centrado no parâmetro de interesse.
+		\item Se $\sqrt{nh}\text{Vi\'{e}s}(\tilde{m}(x)) \to 0$, mau centramento desaparece assintoticamente, e intervalo de confiança $$[\tilde{m}(x) + z_{\alpha/2}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x)]}}, \tilde{m}(x) + z_{1-\alpha/2}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x)]}}]\,,$$ tem cobertura assintótica de $1-\alpha$.
+		\begin{itemize}
+			\item  $\sqrt{nh}\text{Vi\'{e}s}(\tilde{m}(x)) \to 0 \iff n h^5 \to 0$ (condição de \textit{undersmoothing}).
+			\item Banda ótima para estimação pontual {\color{red}não} satisfaz essa condição.
+			\item Condição também não é ``ótima'' sob diferentes critérios inferenciais \citep{armstrong2020simple,calonico2022coverage}
+		\end{itemize}
+	\end{itemize}
+	\end{frame}
+	\begin{frame}{Alternativas inferenciais}
+	\begin{itemize}
+		\item \citet{calonico2014robust}, \citet{calonico2018effect,calonico2022coverage}: estime $\text{Vi\'{e}s}(\tilde{m}(x))$ e ajuste erro padrão pela incerteza desta etapa, considerando o intervalo de confiança:
+		 $$\tilde{m}(x) \pm z_{1- \alpha/2}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) +\text{Vi\'{e}s}(\tilde{m}(x))]}},\,,$$
+		 \item \citet{armstrong2020simple}: considere o intervalo de confiança
+		 	 $$\tilde{m}(x)- \widehat{\text{Vi\'{e}s}(\tilde{m}(x))} \pm {\color{red}c_{1- \alpha/2}(M)}\sqrt{\widehat{\mathbb{V}[\tilde{m}(x) +\text{Vi\'{e}s}(\tilde{m}(x))]}},\,,$$
+		 	 onde $c_q(M)$ incorpora o efeito do pior viés possível, numa classe de funções ``suaves'', com parâmetro de suavidade $M$, sobre o valor crítico.
+		 	 \begin{itemize}
+		 	 	\item Intervalos \textit{undersmothened} ou corrigidos por viés podem ser vistos como escolhendo um $M$ implicitamente.
+		 	 \end{itemize}
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Aproximação uniforme}
+		\begin{itemize}
+			\item A discussão até aqui focou na qualidade da aproximação local em um único ponto.
+			\item Entretanto, para o uso dos estimadores locais em análises posteriores, é interessante entender suas propriedades de aproximação, {\color{blue}uniformemente no suporte}.
+			\item \citet{Einmahl2005}: para o estimador de Nadaraya-Watson com vetor aleatório $\mathbf{X}$ em $\mathbb{R}^d$,  e para qualquer subconjunto compacto $I$ em $\mathbb{R}^d$:
+			
+			$$\sup_{\boldsymbol{x} \in I}|\hat{m}(\boldsymbol{x}) - m(\boldsymbol{x}) - \operatorname{Viés}(\hat{m}(\boldsymbol{x}))| = O_{\mathbb{P}}\left(\sqrt{\frac{ (-\sum_{j=1}^d \log(h_j)) \lor \log \log n}{{nh_1\ldots h_d}}}\right)$$ 
+			\item Resultados similares para dados com dependência temporal \citep{alvarez2023maximalinequalitylocalempirical}.
 		\end{itemize}
 	\end{frame}
 	
+	\begin{frame}{Aproximação ``global''}
+		\begin{itemize}
+			\item Recorde-se que, sob condições bastante gerais, o estimador de MQO de $Y$ num vetor $\boldsymbol{X}$ é consistente para o minimizador de
+			
+			$$\min_{b \in \mathbb{R}^d} \mathbb{E}[(Y-\boldsymbol{X}'b)^2]\,, $$
+			e que esse mesmo minimizador também resolve
+			
+			$$\min_{b \in \mathbb{R}^d} \mathbb{E}[(\mathbb{E}[Y|\boldsymbol{X}]-\boldsymbol{X}'b)^2]\,, $$
+			de modo que o estimador de MQO recupera a melhor aproximação linear à função de esperança condicional $\mathbb{E}[Y|\boldsymbol{X}]$ na norma $L_2(\mathbb{P}_{\boldsymbol{X}})$.
+			\item No entanto, essa aproximação pode ser bastante ruim quando o objetivo não é ``resumir'' $\mathbb{E}[Y|\mathbf{X}]$, e sim analisar seu comportamento ``global''.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Aproximando a esperança condicional}
+		\begin{itemize}
+			\item Recorde-se que a função esperança condicional resolve:
+			$$\min_{h \in L_2(\mathbb{P}_{\boldsymbol{X}})} \mathbb{E}[(Y-h(\boldsymbol{X}))^2]$$
+			\item Quando o suporte de $\mathcal{X}$ de $\boldsymbol{X}$ é finito e pequeno relativamente a $n$, análogo amostral do problema acima é factível, visto que $L_2(\mathbb{P}_{\boldsymbol{X}}) = \{\sum_{s \in \mathcal{X}} a_s \mathbf{1}\{x = s\}: (a_s)_{s\in \mathcal{X}} \in \mathbb{R}^{\mathcal{X}}\}$.
+			\begin{itemize}
+				\item Regressão ``saturada'', com indicadores de todos os pontos do suporte, é um estimador não paramétrico factível de $\mathbb{E}[Y|\boldsymbol{X}]$.
+			\end{itemize}
+			\item No entanto, se $|\mathcal{X}|$ é grande em relação a $n$, análogo amostral torna-se impraticável.
+			\begin{itemize}
+				\item Pouco ou nenhum (se $|\mathcal{X}|\geq n$) grau de liberdade para estimar a esperança condicional.
+				\item Em particular, se $\boldsymbol{X}$ contiver alguma variável aleatória contínua, existirão infinitas soluções que se adequarão aos dados perfeitamente, e poderão distar de $\mathbb{E}[Y|\boldsymbol{X}]$ tão mal quanto se queira.
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Estimador de séries}
+		\begin{itemize}
+			\item Dada a impraticabilidade de se estimar:
+				$$\min_{h \in L_2(\mathbb{P}_{\boldsymbol{X}})} \sum_{i=1}^n (Y_i-h(\boldsymbol{X}_i))^2 \, ,$$
+				o estimador não paramétrico de {\color{red}séries} propõe-se a estimar:
+				
+				$$\min_{h \in \Theta_{J_n}} \sum_{i=1}^n (Y_i-h(\boldsymbol{X}_i))^2 \, ,$$
+				onde $(\Theta_{j})_{j \in \mathbb{N}}$ são uma sequência crescente de subespaços lineares de $L^2(\mathbb{P}_{\boldsymbol{X}})$ de {\color{blue}dimensão finita}, tais que a função de esperança condicional $m(\boldsymbol{X})$ satisfaz:
+				
+				$$m \in  \mathcal{A}\,,$$
+				onde $(\mathcal{A},d)$ é um espaço métrico com $\cup_{i \in \mathbb{N}} \Theta_j \subseteq A \subseteq L^2(\mathbb{P}_{\boldsymbol{X}})$ e $A = \overline{\cup_{i \in \mathbb{N}} \Theta_j}$.
+				\begin{itemize}
+					\item Em palavras, $m$ é aproximada tão bem quanto se queira na métrica $d$, por um elemento de $\cup_{i \in \mathbb{N}} \Theta_j$.
+				\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Viés de aproximação e \textit{trade-off} viés-variância}
+	\begin{itemize}
+		\item As propriedades de aproximação do estimador de séries dependem crucialmente do {\color{blue}viés de aproximação }:
+		$$\rho_j = \inf_{s \in \Theta_j} d(m, s) \, .$$
+		\item Essas quantidades são conhecidas teoricamente para diferentes classes de séries, com base em resultados de teoria da aproximação.
+		\item A escolha de $J_n$ pode ser feita contrastando uma estimativa de $\hat{\rho}_j$ com a variância estimada do estimador, de modo a equalizar o trade-off viés-variância ou garantir inferência correta \citep{belloni2015some,Chen2024}.
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Polinômios}
+	\begin{itemize}
+		\item Considere a situação em que o suporte de $\boldsymbol{X}$ é dado por um intervalo $[a,b]$ de $\mathbb{R}$.
+		\item Nesse caso, podemos considerar a classe de polinômios:
+		$$\Theta_j = \left\{ \sum_{l=0}^j a_l x^l: (a_l)_{l=0}^j \in \mathbb{R}^{j+1}\right\}\, ,$$
+		\item Pelo teorema de Stone-Weierstrass, sabemos que, se $m$ é contínua em $[a,b]$, então $m$ é tão bem aproximada quanto se queira por um polinômio, na norma uniforme.
+		\begin{itemize}
+			\item Sob condições de diferenciabilidade e H\"{o}lder-continuidade nas derivadas de $m$, podemos encontrar uma função explícita para $\rho_j$ como função de $j$ e $m$.
+		\end{itemize}
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{\textit{Splines}}
+	\begin{itemize}
+		\item Os polinômios da seção anterior podem funcionar bastante mal, especialmente na fronteira do suporte (fenômeno de Runge).
+		\begin{itemize}
+			\item Isso se deve à convexidade de $x^p$.
+		\end{itemize}
+		\item Uma alternativa bastante comum consiste no uso de \textit{splines}.
+		\item Um \textit{spline} cúbico com \emph{nós} $ a < t_1 < t_2 < \ldots t_{j-4} < b$ é dado por:
+		
+		$$\Theta_j = \operatorname{span}\{1, x, x^2, x^3, \max(x-t_1,0)^3, \ldots,, \max(x-t_{j-4},0)^3\}$$
+		\item Função $3-1=2$ vezes continuamente diferenciável em $[a,b]$.
+		\item Ordem do polinômio é \emph{fixa}, o que mudam é o número de nós (uma convenção é usar percentis igualmente espaçados do suporte).
+		\item Melhores propriedades de aproximação para funções em espaços H\"{o}lder que polinômios (veja \cite{belloni2015some}).
+		\item Um \textit{B-Spline} é uma base do espaço gerado por um \textit{spline} com propriedades computacionais desejáveis. 
+	\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{\textit{Tensor products}}
+		\begin{itemize}
+			\item Os resultados anteriores pressupunham que $\boldsymbol{X}$ era univariado.
+			\item O caso multivariado pode ser lidado através de tensores. Construímos séries univariadas para cada uma das entradas de $\boldsymbol{X}$, e depois consideramos o espaço gerado pelos produtos das bases de cada um dos espaços.
+			\item Por exemplo, se $\boldsymbol{X} = (X_1,X_2)$ é bidimensional, e consideramos polinômios de grau 2 para cada uma das dimensões, o espaço-produto é:
+			$$\operatorname{span}\{1, x_1,x_2, x_1 x_2, x_1^2 x_2, x_2^2, x_1 x_2^2, x_1^2, x_2^2, x_1^2 x_2^2\}$$
+			\item Resultado de aproximação uniforme para estimador de séries baseado em tensores de \textit{splines} \citep{belloni2015some} e escolha ``ótima'' de $J_n$:
+			
+			$$\sup _{x \in \mathcal{X}}|\widehat{h}(x)-m(x)| = O_{\mathbb{P}}\left(\left(\frac{\log n}{n}\right)^{s /(2 s+d)}\right)\, ,$$
+			onde $s$ é o ``grau de suavidade'' de $m$, dado pelas restrições sobre sua derivada.
+		\end{itemize}	\end{frame}
+	\begin{frame}{Resultados adicionais de estimação de séries}
+\begin{enumerate}
+	\item Outras bases \citep[veja][]{chen2007,belloni2015some,cattaneo2020large}:
+	\begin{itemize}
+		\item Polinômios particionados.
+		\item Bases de Fourier.
+		\item Ondaletas.
+	\end{itemize}
+	\item Aproximações com dependência temporal \citep{Chen2015}.
+	\item Outras funções objetivo.
+	\begin{itemize}
+		\item Quantil  \citep{belloni2019conditional}.
+	\end{itemize}
+\end{enumerate}
+	\end{frame}
+	\appendix
 		\begin{frame}[allowframebreaks]{Bibliografia}
 	\printbibliography
 

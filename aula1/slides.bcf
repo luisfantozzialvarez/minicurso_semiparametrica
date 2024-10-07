@@ -2364,6 +2364,24 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">benhabib2018skewed</bcf:citekey>
     <bcf:citekey order="2" intorder="1">achdou2022income</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Fan1996</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">armstrong2020simple</bcf:citekey>
+    <bcf:citekey order="4" intorder="2">calonico2022coverage</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">calonico2014robust</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">calonico2018effect</bcf:citekey>
+    <bcf:citekey order="6" intorder="2">calonico2022coverage</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">armstrong2020simple</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Einmahl2005</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">alvarez2023maximalinequalitylocalempirical</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">belloni2015some</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">Chen2024</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">belloni2015some</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">belloni2015some</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">chen2007</bcf:citekey>
+    <bcf:citekey order="13" intorder="2">belloni2015some</bcf:citekey>
+    <bcf:citekey order="13" intorder="3">cattaneo2020large</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">Chen2015</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">belloni2019conditional</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
