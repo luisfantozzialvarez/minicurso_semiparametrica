@@ -1,0 +1,649 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{Belloni2012}{article}{}
+      \name{author}{4}{ul=2}{%
+        {{un=0,uniquepart=base,hash=d36a7f02195c9b910441b02a96249f50}{%
+           family={Belloni},
+           familyi={B\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=80489b75bcde120c9f335f4995d789c2}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=497b6554670ef9f4dfd8d456efd3b41d}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8f5f4e3c6f2527b89aad8891de49fa36}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{96874e6adaf5801868067786baab6aab}
+      \strng{fullhash}{d2562979d07638ee4cdadf5d673d1d02}
+      \strng{bibnamehash}{96874e6adaf5801868067786baab6aab}
+      \strng{authorbibnamehash}{96874e6adaf5801868067786baab6aab}
+      \strng{authornamehash}{96874e6adaf5801868067786baab6aab}
+      \strng{authorfullhash}{d2562979d07638ee4cdadf5d673d1d02}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We develop results for the use of Lasso and post-Lasso methods to form first-stage predictions and estimate optimal instruments in linear instrumental variables (IV) models with many instruments, p. Our results apply even when p is much larger than the sample size, n. We show that the IV estimator based on using Lasso or post-Lasso in the first stage is root-n consistent and asymptotically normal when the first stage is approximately sparse, that is, when the conditional expectation of the endogenous variables given the instruments can be well-approximated by a relatively small set of variables whose identities may be unknown. We also show that the estimator is semiparametrically efficient when the structural error is homoscedastic. Notably, our results allow for imperfect model selection, and do not rely upon the unrealistic “beta-min” conditions that are widely used to establish validity of inference following model selection (see also Belloni, Chernozhukov, and Hansen (2011b)). In simulation experiments, the Lasso-based IV estimator with a data-driven penalty performs well compared to recently advocated many-instrument robust procedures. In an empirical example dealing with the effect of judicial eminent domain decisions on economic outcomes, the Lasso-based IV estimator outperforms an intuitive benchmark. Optimal instruments are conditional expectations. In developing the IV results, we establish a series of new results for Lasso and post-Lasso estimators of nonparametric conditional expectation functions which are of independent theoretical and practical interest. We construct a modification of Lasso designed to deal with non-Gaussian, heteroscedastic disturbances that uses a data-weighted ℓ1-penalty function. By innovatively using moderate deviation theory for self-normalized sums, we provide convergence rates for the resulting Lasso and post-Lasso estimators that are as sharp as the corresponding rates in the homoscedastic Gaussian case under the condition that logp = o(n1/3). We also provide a data-driven method for choosing the penalty level that must be specified in obtaining Lasso and post-Lasso estimates and establish its asymptotic validity under non-Gaussian, heteroscedastic disturbances.}
+      \field{journaltitle}{Econometrica}
+      \field{number}{6}
+      \field{title}{Sparse Models and Methods for Optimal Instruments With an Application to Eminent Domain}
+      \field{volume}{80}
+      \field{year}{2012}
+      \field{pages}{2369\bibrangedash 2429}
+      \range{pages}{61}
+      \verb{doi}
+      \verb https://doi.org/10.3982/ECTA9626
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA9626
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA9626
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA9626
+      \endverb
+      \keyw{Inference on a low-dimensional parameter after model selection,imperfect model selection,instrumental variables,Lasso,post-Lasso,data-driven penalty,heteroscedasticity,non-Gaussian errors,moderate deviations for self-normalized sums}
+    \endentry
+    \entry{Belloni2013}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d36a7f02195c9b910441b02a96249f50}{%
+           family={Belloni},
+           familyi={B\bibinitperiod},
+           given={Alexandre},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c75cbe2cefd1e532f636a50892605d06}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{2}{%
+        {Bernoulli Society for Mathematical Statistics}%
+        {Probability}%
+      }
+      \strng{namehash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \strng{fullhash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \strng{bibnamehash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \strng{authorbibnamehash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \strng{authornamehash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \strng{authorfullhash}{37a5616507fdc1fca6c2bf0cf46c714b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Bernoulli}
+      \field{number}{2}
+      \field{title}{{Least squares after model selection in high-dimensional sparse models}}
+      \field{volume}{19}
+      \field{year}{2013}
+      \field{pages}{521\bibrangedash 547}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.3150/11-BEJ410
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3150/11-BEJ410
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3150/11-BEJ410
+      \endverb
+      \keyw{Lasso,OLS post-Lasso,post-model selection estimators}
+    \endentry
+    \entry{Bickel2009}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4cbb7e2b2b68aff0e8c8ad3f0cf5f335}{%
+           family={Bickel},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima J.},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aa1c3821bc1014ab941adf81a54bcda0}{%
+           family={Ritov},
+           familyi={R\bibinitperiod},
+           given={Ya’acov},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=21b70ad2fb169788a90eaf0c20dcc8d6}{%
+           family={Tsybakov},
+           familyi={T\bibinitperiod},
+           given={Alexandre\bibnamedelima B.},
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{7763e90111a9df05d4475e0357810ec5}
+      \strng{fullhash}{7763e90111a9df05d4475e0357810ec5}
+      \strng{bibnamehash}{7763e90111a9df05d4475e0357810ec5}
+      \strng{authorbibnamehash}{7763e90111a9df05d4475e0357810ec5}
+      \strng{authornamehash}{7763e90111a9df05d4475e0357810ec5}
+      \strng{authorfullhash}{7763e90111a9df05d4475e0357810ec5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Annals of Statistics}
+      \field{number}{4}
+      \field{title}{{Simultaneous analysis of Lasso and Dantzig selector}}
+      \field{volume}{37}
+      \field{year}{2009}
+      \field{pages}{1705\bibrangedash 1732}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1214/08-AOS620
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/08-AOS620
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/08-AOS620
+      \endverb
+      \keyw{linear models,Model selection,nonparametric statistics}
+    \endentry
+    \entry{buhlmann2007}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=73b8ae79083852e052f5bd5f82021408}{%
+           family={Bühlmann},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2df5fa9113f59f6da45be87390cb41f4}{%
+           family={Hothorn},
+           familyi={H\bibinitperiod},
+           given={Torsten},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Institute of Mathematical Statistics}%
+      }
+      \strng{namehash}{8634cec24e0553f17ed0ee7d492422c8}
+      \strng{fullhash}{8634cec24e0553f17ed0ee7d492422c8}
+      \strng{bibnamehash}{8634cec24e0553f17ed0ee7d492422c8}
+      \strng{authorbibnamehash}{8634cec24e0553f17ed0ee7d492422c8}
+      \strng{authornamehash}{8634cec24e0553f17ed0ee7d492422c8}
+      \strng{authorfullhash}{8634cec24e0553f17ed0ee7d492422c8}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Science}
+      \field{number}{4}
+      \field{title}{{Boosting Algorithms: Regularization, Prediction and Model Fitting}}
+      \field{volume}{22}
+      \field{year}{2007}
+      \field{pages}{477\bibrangedash 505}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.1214/07-STS242
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1214/07-STS242
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1214/07-STS242
+      \endverb
+      \keyw{generalized additive models,generalized linear models,gradient boosting,software,Survival analysis,Variable selection}
+    \endentry
+    \entry{buhlmann2003}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=73b8ae79083852e052f5bd5f82021408}{%
+           family={Bühlmann},
+           familyi={B\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43d22dc81cc0e5bb1d24d5eeb65ecbae}{%
+           family={Yu},
+           familyi={Y\bibinitperiod},
+           given={Bin},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ASA Website}%
+      }
+      \strng{namehash}{9a842b7a0681e0a16df4fb8186924946}
+      \strng{fullhash}{9a842b7a0681e0a16df4fb8186924946}
+      \strng{bibnamehash}{9a842b7a0681e0a16df4fb8186924946}
+      \strng{authorbibnamehash}{9a842b7a0681e0a16df4fb8186924946}
+      \strng{authornamehash}{9a842b7a0681e0a16df4fb8186924946}
+      \strng{authorfullhash}{9a842b7a0681e0a16df4fb8186924946}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the American Statistical Association}
+      \field{number}{462}
+      \field{title}{Boosting With the L2 Loss}
+      \field{volume}{98}
+      \field{year}{2003}
+      \field{pages}{324\bibrangedash 339}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1198/016214503000125
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1198/016214503000125
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1198/016214503000125
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1198/016214503000125
+      \endverb
+    \endentry
+    \entry{chetverikov2021selecting}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ef4b66d2ca2dde47ec1b0afa98306775}{%
+           family={Chetverikov},
+           familyi={C\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0212c870e31ec3797b020a8707857f8a}{%
+           family={S{ø}rensen},
+           familyi={S\bibinitperiod},
+           given={Jesper\bibnamedelima Riis-Vestergaard},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinithyphendelim V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \strng{fullhash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \strng{bibnamehash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \strng{authorbibnamehash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \strng{authornamehash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \strng{authorfullhash}{9b3d32fcf6f18a41cc1031943c3d516a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2104.04716}
+      \field{title}{Selecting Penalty Parameters of High-Dimensional M-Estimators using Bootstrapping after Cross-Validation}
+      \field{year}{2021}
+    \endentry
+    \entry{Claeskens}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=612a48fa7cf7337c63d446377b88eab2}{%
+           family={Claeskens},
+           familyi={C\bibinitperiod},
+           given={Gerda},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8d713106b3d1e20ec2a5c492fb922ee3}{%
+           family={Krivobokova},
+           familyi={K\bibinitperiod},
+           given={Tatyana},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9001b6edc4376f43834e4ff420e7b0c2}{%
+           family={Opsomer},
+           familyi={O\bibinitperiod},
+           given={Jean\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{227536ff2deceacca9012090e5d7bcaa}
+      \strng{fullhash}{227536ff2deceacca9012090e5d7bcaa}
+      \strng{bibnamehash}{227536ff2deceacca9012090e5d7bcaa}
+      \strng{authorbibnamehash}{227536ff2deceacca9012090e5d7bcaa}
+      \strng{authornamehash}{227536ff2deceacca9012090e5d7bcaa}
+      \strng{authorfullhash}{227536ff2deceacca9012090e5d7bcaa}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{We study the class of penalized spline estimators, which enjoy similarities to both regression splines, without penalty and with fewer knots than data points, and smoothing splines, with knots equal to the data points and a penalty controlling the roughness of the fit. Depending on the number of knots, sample size and penalty, we show that the theoretical properties of penalized regression spline estimators are either similar to those of regression splines or to those of smoothing splines, with a clear breakpoint distinguishing the cases. We prove that using fewer knots results in better asymptotic rates than when using a large number of knots. We obtain expressions for bias and variance and asymptotic rates for the number of knots and penalty parameter.}}
+      \field{issn}{0006-3444}
+      \field{journaltitle}{Biometrika}
+      \field{month}{09}
+      \field{number}{3}
+      \field{title}{{Asymptotic properties of penalized spline estimators}}
+      \field{volume}{96}
+      \field{year}{2009}
+      \field{pages}{529\bibrangedash 544}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1093/biomet/asp035
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/biomet/article-pdf/96/3/529/709761/asp035.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/biomet/asp035
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/biomet/asp035
+      \endverb
+    \endentry
+    \entry{Kueck2023}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=77fd62117786ff9d613beff10c9cacb8}{%
+           family={Kueck},
+           familyi={K\bibinitperiod},
+           given={Jannis},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d6c63f84450b7721a620cc1608612552}{%
+           family={Luo},
+           familyi={L\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8b1ae9734f477eac207fdb4e76b4b4d}{%
+           family={Spindler},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79effae60e7b0773e28631e31e5226f4}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zigan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2d3092d501b16785470aaa19963ebe75}
+      \strng{fullhash}{bfeee73b5c14b706e06392b6d2916aa0}
+      \strng{bibnamehash}{2d3092d501b16785470aaa19963ebe75}
+      \strng{authorbibnamehash}{2d3092d501b16785470aaa19963ebe75}
+      \strng{authornamehash}{2d3092d501b16785470aaa19963ebe75}
+      \strng{authorfullhash}{bfeee73b5c14b706e06392b6d2916aa0}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Empirical researchers are increasingly faced with rich data sets containing many controls or instrumental variables, making it essential to choose an appropriate approach to variable selection. In this paper, we provide results for valid inference after post- or orthogonal L2-boosting is used for variable selection. We consider treatment effects after selecting among many control variables and instrumental variable models with potentially many instruments. To achieve this, we establish new results for the rate of convergence of iterated post-L2-boosting and orthogonal L2-boosting in a high-dimensional setting similar to Lasso, i.e., under approximate sparsity without assuming the beta-min condition. These results are extended to the 2SLS framework and valid inference is provided for treatment effect analysis. We give extensive simulation results for the proposed methods and compare them with Lasso. In an empirical application, we construct efficient IVs with our proposed methods to estimate the effect of pre-merger overlap of bank branch networks in the US on the post-merger stock returns of the acquirer bank.}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{2}
+      \field{title}{Estimation and inference of treatment effects with L2-boosting in high-dimensional settings}
+      \field{volume}{234}
+      \field{year}{2023}
+      \field{pages}{714\bibrangedash 731}
+      \range{pages}{18}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.jeconom.2022.02.005
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407622000471
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0304407622000471
+      \endverb
+      \keyw{-boosting,Treatment effects,Instrumental variables,Post-selection inference,High-dimensional data}
+    \endentry
+    \entry{Friedberg2021}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=ec7d63702228b741ff93a855120ceae1}{%
+           family={Rina\bibnamedelima Friedberg},
+           familyi={R\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Susan\bibnamedelima Athey},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0,
+           suffix={Julie\bibnamedelima Tibshirani},
+           suffixi={J\bibinitperiod\bibinitdelim T\bibinitperiod},
+           suffixun=0}}%
+        {{un=0,uniquepart=base,hash=e22c2c3bb1bd12e43f46c07ea788b581}{%
+           family={Wager},
+           familyi={W\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ASA Website}%
+      }
+      \strng{namehash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \strng{fullhash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \strng{bibnamehash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \strng{authorbibnamehash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \strng{authornamehash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \strng{authorfullhash}{48a3e2c52ce032e31a69ccb9834240e7}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Computational and Graphical Statistics}
+      \field{number}{2}
+      \field{title}{Local Linear Forests}
+      \field{volume}{30}
+      \field{year}{2021}
+      \field{pages}{503\bibrangedash 517}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/10618600.2020.1831930
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/10618600.2020.1831930
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/10618600.2020.1831930
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/10618600.2020.1831930
+      \endverb
+    \endentry
+    \entry{Spiess2023}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=2e249611355f88583165432eab0ba4e1}{%
+           family={Spiess},
+           familyi={S\bibinitperiod},
+           given={Jann},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f74fd63923a56fa58b8687fdf1cc7ff2}{%
+           family={Imbens},
+           familyi={I\bibinitperiod},
+           given={Guido},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6807a9725f4ffa514cf9760a97726b9b}{%
+           family={Venugopal},
+           familyi={V\bibinitperiod},
+           given={Amar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{6}{}{%
+        {{hash=6d9c5f3daf57997af27b3617ec7d1fe9}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=85bc7cefdd5554b76135cee4b8e4ce02}{%
+           family={Naumann},
+           familyi={N\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fbc410321d4ef88338a144a263d84a52}{%
+           family={Globerson},
+           familyi={G\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b4c13335066154b96f9f6b69c52f1c34}{%
+           family={Saenko},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=d5244a9be1ca0eac9110d23de0146408}{%
+           family={Hardt},
+           familyi={H\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=3cd8fe4b36223cabb80a65d5bca613b3}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Curran Associates, Inc.}%
+      }
+      \strng{namehash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{fullhash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{bibnamehash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{authorbibnamehash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{authornamehash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{authorfullhash}{83c3da2f285b3522d4df9664265fd2d6}
+      \strng{editorbibnamehash}{cdfb36351492c4e843cfb87a8549b3ef}
+      \strng{editornamehash}{cdfb36351492c4e843cfb87a8549b3ef}
+      \strng{editorfullhash}{c4805185ea5603cbf8bdc85fe57d1ec3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Advances in Neural Information Processing Systems}
+      \field{title}{Double and Single Descent in Causal Inference with an Application to High-Dimensional Synthetic Control}
+      \field{volume}{36}
+      \field{year}{2023}
+      \field{pages}{63642\bibrangedash 63659}
+      \range{pages}{18}
+      \verb{urlraw}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2023/file/c904c5d43d8a01177063977bd67bf6fc-Paper-Conference.pdf
+      \endverb
+      \verb{url}
+      \verb https://proceedings.neurips.cc/paper_files/paper/2023/file/c904c5d43d8a01177063977bd67bf6fc-Paper-Conference.pdf
+      \endverb
+    \endentry
+    \entry{syrgkanis2020estimation}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=342033b26b8f8c243380f2343a53e1fa}{%
+           family={Syrgkanis},
+           familyi={S\bibinitperiod},
+           given={Vasilis},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e95a1d3e80cb547423ef1bb4b961e84}{%
+           family={Zampetakis},
+           familyi={Z\bibinitperiod},
+           given={Manolis},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a9a8001b840a214e792b8147dd262ad2}
+      \strng{fullhash}{a9a8001b840a214e792b8147dd262ad2}
+      \strng{bibnamehash}{a9a8001b840a214e792b8147dd262ad2}
+      \strng{authorbibnamehash}{a9a8001b840a214e792b8147dd262ad2}
+      \strng{authornamehash}{a9a8001b840a214e792b8147dd262ad2}
+      \strng{authorfullhash}{a9a8001b840a214e792b8147dd262ad2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{title}{Estimation and Inference with Trees and Forests in High Dimensions}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2007.03210
+      \endverb
+    \endentry
+    \entry{Xiao}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=efc59ab67e5d51b34872a810caa296bb}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Luo},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Taylor \& Francis}%
+      }
+      \strng{namehash}{efc59ab67e5d51b34872a810caa296bb}
+      \strng{fullhash}{efc59ab67e5d51b34872a810caa296bb}
+      \strng{bibnamehash}{efc59ab67e5d51b34872a810caa296bb}
+      \strng{authorbibnamehash}{efc59ab67e5d51b34872a810caa296bb}
+      \strng{authornamehash}{efc59ab67e5d51b34872a810caa296bb}
+      \strng{authorfullhash}{efc59ab67e5d51b34872a810caa296bb}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Nonparametric Statistics}
+      \field{number}{2}
+      \field{title}{Asymptotics of bivariate penalised splines}
+      \field{volume}{31}
+      \field{year}{2019}
+      \field{pages}{289\bibrangedash 314}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1080/10485252.2018.1563295
+      \endverb
+      \verb{eprint}
+      \verb https://doi.org/10.1080/10485252.2018.1563295
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/10485252.2018.1563295
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/10485252.2018.1563295
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
