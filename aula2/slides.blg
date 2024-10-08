@@ -1,17 +1,17 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'slides.blg'
-[96] biber-darwin:340> INFO - === Tue Oct  8, 2024, 11:41:26
-[112] Biber.pm:419> INFO - Reading 'slides.bcf'
-[208] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
-[226] Biber.pm:4419> INFO - Processing section 0
-[239] Biber.pm:4610> INFO - Looking for bibtex file '../bibliography.bib' for section 0
-[244] bibtex.pm:1713> INFO - LaTeX decoding ...
-[331] bibtex.pm:1519> INFO - Found BibTeX data source '../bibliography.bib'
-[469] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[470] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[470] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
-[470] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
-[491] bbl.pm:660> INFO - Writing 'slides.bbl' with encoding 'UTF-8'
-[502] bbl.pm:763> INFO - Output to slides.bbl
-[502] Biber.pm:131> WARN - Duplicate entry key: 'Bickel2009' in file '../bibliography.bib', skipping ...
-[502] Biber.pm:133> INFO - WARNINGS: 1
+[133] biber:340> INFO - === ter out  8, 2024, 17:33:34
+[157] Biber.pm:419> INFO - Reading 'slides.bcf'
+[271] Biber.pm:979> INFO - Found 12 citekeys in bib section 0
+[292] Biber.pm:4419> INFO - Processing section 0
+[309] Biber.pm:4610> INFO - Looking for bibtex file '../bibliography.bib' for section 0
+[316] bibtex.pm:1713> INFO - LaTeX decoding ...
+[420] bibtex.pm:1519> INFO - Found BibTeX data source '../bibliography.bib'
+[644] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[644] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[644] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[644] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[673] bbl.pm:660> INFO - Writing 'slides.bbl' with encoding 'UTF-8'
+[685] bbl.pm:763> INFO - Output to slides.bbl
+[685] Biber.pm:131> WARN - Duplicate entry key: 'Bickel2009' in file '../bibliography.bib', skipping ...
+[686] Biber.pm:133> INFO - WARNINGS: 1

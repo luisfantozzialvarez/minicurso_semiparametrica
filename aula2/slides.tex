@@ -127,7 +127,7 @@ natbib=true
 	\begin{frame}{Estimação não paramétrica moderna}
 		\begin{itemize}
 			\item Os métodos da literatura que se convencionou chamar aprendizagem estatística (ou aprendizagem de máquina, em seu braço mais computacional) também partem do problema populacional.
-						$$\hat{h}\in \operatorname{min}_{s \in \mathcal{H}}\mathbb{E}[(Y_i - s(\boldsymbol{X}_i))^2]\, ,$$
+						$$\operatorname{min}_{s \in \mathcal{H}}\mathbb{E}[(Y_i - s(\boldsymbol{X}_i))^2]\, ,$$
 			\item O que esses problemas adicionam, em relação à  estimação clássica por séries?
 			\begin{itemize}
 				\item Classes $\mathcal{H}$ de funções que incorporam não linearidade (``expressividade'') de um jeito ``inteligente'', com ``menor'' complexidade (estimadores de $\downarrow$ variância) que métodos de séries.
@@ -156,7 +156,7 @@ natbib=true
 			\item Suponha que a matriz de desenho $\mathbb{X}_{n\times k} = [\boldsymbol{X}_1 , \ldots \boldsymbol{X}_n]'$ apresenta posto $k$, e que $\mathbb{E}[Y_i|\boldsymbol{X}_i] = \gamma'\boldsymbol{X}_i$.
 		\end{itemize}
 		\item Considere gerar  $n - k$ vetores de controles adicionais $Z_j$, $j=k+1,\ldots n$, sorteando-os independentemente dos dados e entre si, de uma, $\mathcal{N}(0,1)$.
-		\item Seja $\hat{\beta}$ o estimador de MQO de $Y$ em $X$; e $(\tilde{\beta}, \tilde{\gamma})$ o estimador de MQO de $Y$ em $X$ e os $Z_j$.
+		\item Seja $\hat{\beta}$ o estimador de MQO de $Y$ em $X$; e $(\tilde{\beta}, \tilde{\psi})$ o estimador de MQO de $Y$ em $X$ e os $Z_j$.
 		\begin{itemize}
 			\item Qual estimador tem o melhor ajuste na amostra?
 		\end{itemize}
@@ -219,7 +219,7 @@ natbib=true
 		\item A estimação por Lasso pode ser vista como realizando seleção automática de variáveis. 
 		\item Isso se deve ao fato de que, pela natureza da penalidade, temos que se:
 		
-		$$|-2\sum_{i=1}^n(Y_i-\hat{b}'\boldsymbol{Z}_i)Z_{ij}| < \lambda \hat{w}_j \implies \hat{b}_j  = 0$$
+		$$\left|-2\sum_{i=1}^n(Y_i-\hat{b}'\boldsymbol{Z}_i)Z_{ij}\right| < \lambda \hat{w}_j \implies \hat{b}_j  = 0$$
 		\item Dessa forma, a solução da otimização contará com {zeros} \textbf{exatos}, e, se $\lambda $ for relativamente grande, haverá muitos desses zeros no vetor  $\hat{b}$ (esparsidade).
 		\begin{itemize}
 			\item Em contraste, o estimador de MQO que inclui uma variável contínua apresentará um zero na entrada correspondente com probabilidade zero.
@@ -264,7 +264,7 @@ natbib=true
 	\begin{itemize}
 		\item Sob a condição de esparsidade, a escolha de penalidade ideal, e condições técnicas adicionais, \citet{Belloni2012} chegam à seguinte taxa de aproximação:
 		
-		$$\sqrt{\frac{1}{n}\sum_{i=1}^n (\hat{b}_{\text{LASSO}}'\boldsymbol{Z}_i - \mathbb{E}[Y_i|\boldsymbol{Z}_i])^2}  = O_{\mathbb{P}}\left(\frac{s \log(k\lor n)}{n}\right)$$
+		$$\sqrt{\frac{1}{n}\sum_{i=1}^n (\hat{b}_{\text{LASSO}}'\boldsymbol{Z}_i - \mathbb{E}[Y_i|\boldsymbol{Z}_i])^2}  = O_{\mathbb{P}}\left(\sqrt{\frac{s \log(k\lor n)}{n}}\right)$$
 		\item Note que a taxa acima permite que $k >> n$ e ainda se obtenha consistência na norma $L_2$ empírica
 		\item Autores também consideram a possibilidade de se utilizar MQO após o Lasso, somente incluindo as variáveis que foram selecionadas pelo Lasso (\textit{post-Lasso} de \cite{Belloni2013}) e chegam às mesmas taxas.
 	\end{itemize}
@@ -437,6 +437,11 @@ natbib=true
 	\end{itemize}
 \end{itemize}
 \end{frame}
+
+\begin{frame}{Percéptron}
+	conteúdo...
+\end{frame}
+
 
 	\appendix
 		\begin{frame}[allowframebreaks]{Bibliografia}
