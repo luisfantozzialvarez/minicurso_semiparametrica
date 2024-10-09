@@ -83,7 +83,8 @@
 \usepackage[
 backend=biber,
 style=authoryear,
-natbib=true
+natbib=true,
+uniquename=false,
 ]{biblatex}
 \addbibresource{../bibliography.bib}
 
@@ -439,9 +440,109 @@ natbib=true
 \end{frame}
 
 \begin{frame}{Percéptron}
-	conteúdo...
+	\centering
+\begin{tikzpicture}
+	
+	% Input nodes
+	\node at (-2, 1.5) (x1) {$x_1$};
+	\node at (-2, 0.5) (x2) {$x_2$};
+	\node at (-2, -0.5) (x3) {$x_3$};
+	\node at (-2, -1.5) (dots) {$\vdots$};
+	\node at (-2, -2.5) (xn) {$x_n$};
+	
+	% Weights
+	\node at (-1, 0.5) (w1) {$w_1$};
+	\node at (-1, 0) (w2) {$w_2$};
+	\node at (-1, -0.5) (w3) {$w_3$};
+	\node at (-1, -1.2) (wn) {$w_n$};
+	
+	% Arrows from inputs to summation
+	\draw[->] (x1) -- (-0.5, -0.3);
+	\draw[->] (x2) -- (-0.5, -0.4);
+	\draw[->] (x3) -- (-0.5, -0.5);
+	\draw[->] (xn) -- (-0.5, -0.6);
+	
+	% Summation block
+	\draw[fill=lightgray] (0, -0.5) circle (0.5cm);
+	\node at (0, -0.5) {$\Sigma$};
+	
+	
+	% Arrow to activation function
+	\draw[->] (0.5, -0.5) -- (1.5, -0.5);
+	
+	% Activation function block
+	\draw[thick] (1.5, -1) rectangle (2.5, 0);
+	\node at (2, -0.5) {$f(z)$};
+	
+	% Output arrow
+	\draw[->] (2.5, -0.5) -- (3.5, -0.5);
+	\node at (4, -0.5) {Output};
+	
+\end{tikzpicture}
+
+$$\text{Output}=f\left(\sum_{j=1}^n w_j x_j\right)$$
+
 \end{frame}
 
+\begin{frame}{Funções de ativação}
+	\begin{itemize}
+		\item A função $f$ é conhecida como função de ativação. Algumas escolhas populares são.
+		\vspace{1em}
+		\begin{tabular}{llll}
+			\hline
+			\textbf{Activation Function} & \textbf{Formula} & \textbf{Range} \\
+			Step Function & $f(z) = \begin{cases} 
+				1 & \text{if } z \geq 0 \\
+				0 & \text{if } z < 0 
+			\end{cases}$ & $\{0, 1\}$ \\
+			Sigmoid (Logistic) & $f(z) = \frac{1}{1 + e^{-z}}$ & $(0, 1)$ \\
+			ReLU (Rectified Linear Unit) & $f(z) = \max(0, z)$ & $[0, \infty)$ \\
+			Leaky ReLU & $f(z) = \begin{cases} 
+				z & \text{if } z \geq 0 \\
+				\alpha z & \text{if } z < 0
+			\end{cases}$ & $\mathbb{R}$ \\
+			Identity & $f(z) = z$ &$ \mathbb{R}$\\
+			\hline 
+		\end{tabular}
+
+		
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Rede neural \textit{feed-forward} com uma camada oculta}
+\centering 
+\includegraphics[scale=0.25]{graficos/single_layer.png}
+\end{frame}
+
+\begin{frame}{Rede neural  \textit{feed-forward}  profunda}
+	\centering \includegraphics[scale=0.5]{graficos/deep_neural.png}
+
+\end{frame}
+
+\begin{frame}{Resultados teóricos}
+\begin{itemize}
+	\item Os resultados clássicos sobre a qualidade de aproximação das redes neurais focam no caso de baixa dimensão (dimensão dos controles fixo) e em redes com uma única camada oculta.
+	\begin{itemize}
+		\item Nesse caso, as redes neurais podem ser vistas como uma versão do estimador de séries, e se a largura (número de percéptrons na camada oculta) $J_n$ cresce otimamente como função do tamanho amostral, o estimador com função de ativação suave apresenta taxas de convergência de no mínimo $n^{-1/4}$ para $\mathbb{E}[Y|\boldsymbol{X}]$ suficientemente suave \citep{Chen1999,chen2007}.
+	\end{itemize}
+	\item No entanto, na prática, redes profundas são conhecidamente melhores.
+	\begin{itemize}
+		\item Taxas de convergência para redes profundas, em que profundidade e crescimento são funções do tamanho amostral, no caso de dimensão finita, por \citep{Farrell2021}.
+	\end{itemize}
+	\item Para ambientes de alta dimensão, resultados recentes sobre o comportamento de redes neurais profundas sob versões de esparsidade são discutidos em \cite{chernozhukov2024appliedcausalinferencepowered}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\textit{Kernel ridge regression}}
+\begin{itemize}
+	\item Um método de introduzir não linearidade que, por limitação de espaço, não vamos discutir aqui  conhecido como \textit{kernel ridge regression}.
+	\begin{itemize}
+		\item Ideia é introduzir não linearidade no problema trabalhando-se num espaço de funções ``complexo'' indiretamente, sem a necessidade de calcular as funções, através da definição de um produto interno nele (\textit{kernel trick}).
+		
+	\end{itemize}
+	\item Veja a seção 5.8 de \citet{hastie2009elements} para uma introdução e \citet{singh2023kernelridgeregressioninference} para propriedades estatísticas.
+\end{itemize}
+\end{frame}
 
 	\appendix
 		\begin{frame}[allowframebreaks]{Bibliografia}

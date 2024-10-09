@@ -184,7 +184,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -399,7 +399,7 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -2375,6 +2375,12 @@
     <bcf:citekey order="9" intorder="1">Kueck2023</bcf:citekey>
     <bcf:citekey order="10" intorder="1">Friedberg2021</bcf:citekey>
     <bcf:citekey order="11" intorder="1">syrgkanis2020estimation</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Chen1999</bcf:citekey>
+    <bcf:citekey order="12" intorder="2">chen2007</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">Farrell2021</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">chernozhukov2024appliedcausalinferencepowered</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">hastie2009elements</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">singh2023kernelridgeregressioninference</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

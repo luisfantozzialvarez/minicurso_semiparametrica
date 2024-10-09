@@ -21,30 +21,26 @@
   \datalist[entry]{nyt/global//global/global}
     \entry{Belloni2012}{article}{}
       \name{author}{4}{ul=2}{%
-        {{un=0,uniquepart=base,hash=d36a7f02195c9b910441b02a96249f50}{%
+        {{hash=d36a7f02195c9b910441b02a96249f50}{%
            family={Belloni},
            familyi={B\bibinitperiod},
            given={Alexandre},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=80489b75bcde120c9f335f4995d789c2}{%
+           giveni={A\bibinitperiod}}}%
+        {{hash=80489b75bcde120c9f335f4995d789c2}{%
            family={Chen},
            familyi={C\bibinitperiod},
            given={D.},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=497b6554670ef9f4dfd8d456efd3b41d}{%
+           giveni={D\bibinitperiod}}}%
+        {{hash=497b6554670ef9f4dfd8d456efd3b41d}{%
            family={Chernozhukov},
            familyi={C\bibinitperiod},
            given={V.},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8f5f4e3c6f2527b89aad8891de49fa36}{%
+           giveni={V\bibinitperiod}}}%
+        {{hash=8f5f4e3c6f2527b89aad8891de49fa36}{%
            family={Hansen},
            familyi={H\bibinitperiod},
            given={C.},
-           giveni={C\bibinitperiod},
-           givenun=0}}%
+           giveni={C\bibinitperiod}}}%
       }
       \strng{namehash}{96874e6adaf5801868067786baab6aab}
       \strng{fullhash}{d2562979d07638ee4cdadf5d673d1d02}
@@ -82,18 +78,16 @@
     \endentry
     \entry{Belloni2013}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=d36a7f02195c9b910441b02a96249f50}{%
+        {{hash=d36a7f02195c9b910441b02a96249f50}{%
            family={Belloni},
            familyi={B\bibinitperiod},
            given={Alexandre},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=c75cbe2cefd1e532f636a50892605d06}{%
+           giveni={A\bibinitperiod}}}%
+        {{hash=c75cbe2cefd1e532f636a50892605d06}{%
            family={Chernozhukov},
            familyi={C\bibinitperiod},
            given={Victor},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
+           giveni={V\bibinitperiod}}}%
       }
       \list{publisher}{2}{%
         {Bernoulli Society for Mathematical Statistics}%
@@ -131,24 +125,21 @@
     \endentry
     \entry{Bickel2009}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=4cbb7e2b2b68aff0e8c8ad3f0cf5f335}{%
+        {{hash=4cbb7e2b2b68aff0e8c8ad3f0cf5f335}{%
            family={Bickel},
            familyi={B\bibinitperiod},
            given={Peter\bibnamedelima J.},
-           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=aa1c3821bc1014ab941adf81a54bcda0}{%
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=aa1c3821bc1014ab941adf81a54bcda0}{%
            family={Ritov},
            familyi={R\bibinitperiod},
            given={Ya’acov},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=21b70ad2fb169788a90eaf0c20dcc8d6}{%
+           giveni={Y\bibinitperiod}}}%
+        {{hash=21b70ad2fb169788a90eaf0c20dcc8d6}{%
            family={Tsybakov},
            familyi={T\bibinitperiod},
            given={Alexandre\bibnamedelima B.},
-           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod},
-           givenun=0}}%
+           giveni={A\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Institute of Mathematical Statistics}%
@@ -185,18 +176,16 @@
     \endentry
     \entry{buhlmann2007}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=73b8ae79083852e052f5bd5f82021408}{%
+        {{hash=73b8ae79083852e052f5bd5f82021408}{%
            family={Bühlmann},
            familyi={B\bibinitperiod},
            given={Peter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2df5fa9113f59f6da45be87390cb41f4}{%
+           giveni={P\bibinitperiod}}}%
+        {{hash=2df5fa9113f59f6da45be87390cb41f4}{%
            family={Hothorn},
            familyi={H\bibinitperiod},
            given={Torsten},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
+           giveni={T\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Institute of Mathematical Statistics}%
@@ -233,18 +222,16 @@
     \endentry
     \entry{buhlmann2003}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=73b8ae79083852e052f5bd5f82021408}{%
+        {{hash=73b8ae79083852e052f5bd5f82021408}{%
            family={Bühlmann},
            familyi={B\bibinitperiod},
            given={Peter},
-           giveni={P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=43d22dc81cc0e5bb1d24d5eeb65ecbae}{%
+           giveni={P\bibinitperiod}}}%
+        {{hash=43d22dc81cc0e5bb1d24d5eeb65ecbae}{%
            family={Yu},
            familyi={Y\bibinitperiod},
            given={Bin},
-           giveni={B\bibinitperiod},
-           givenun=0}}%
+           giveni={B\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {ASA Website}%
@@ -281,20 +268,166 @@
       \verb https://doi.org/10.1198/016214503000125
       \endverb
     \endentry
+    \entry{chen2007}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=eaefa8dd180971cfee840787cf3b798b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaohong},
+           giveni={X\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=b70b920520f54634a1f03f9312707db2}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=4d9a98a238742fa73876309ee34012ae}{%
+           family={Leamer},
+           familyi={L\bibinitperiod},
+           given={Edward\bibnamedelima E.},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{fullhash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{bibnamehash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{authorbibnamehash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{authornamehash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{authorfullhash}{eaefa8dd180971cfee840787cf3b798b}
+      \strng{editorbibnamehash}{9e17cff1269f98574ee94a2b2c250d96}
+      \strng{editornamehash}{9e17cff1269f98574ee94a2b2c250d96}
+      \strng{editorfullhash}{9e17cff1269f98574ee94a2b2c250d96}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Often researchers find parametric models restrictive and sensitive to deviations from the parametric specifications; semi-nonparametric models are more flexible and robust, but lead to other complications such as introducing infinite-dimensional parameter spaces that may not be compact and the optimization problem may no longer be well-posed. The method of sieves provides one way to tackle such difficulties by optimizing an empirical criterion over a sequence of approximating parameter spaces (i.e., sieves); the sieves are less complex but are dense in the original space and the resulting optimization problem becomes well-posed. With different choices of criteria and sieves, the method of sieves is very flexible in estimating complicated semi-nonparametric models with (or without) endogeneity and latent heterogeneity. It can easily incorporate prior information and constraints, often derived from economic theory, such as monotonicity, convexity, additivity, multiplicity, exclusion and nonnegativity. It can simultaneously estimate the parametric and nonparametric parts in semi-nonparametric models, typically with optimal convergence rates for both parts. This chapter describes estimation of semi-nonparametric econometric models via the method of sieves. We present some general results on the large sample properties of the sieve estimates, including consistency of the sieve extremum estimates, convergence rates of the sieve M-estimates, pointwise normality of series estimates of regression functions, root-n asymptotic normality and efficiency of sieve estimates of smooth functionals of infinite-dimensional parameters. Examples are used to illustrate the general results.}
+      \field{issn}{1573-4412}
+      \field{series}{Handbook of Econometrics}
+      \field{title}{Chapter 76 Large Sample Sieve Estimation of Semi-Nonparametric Models}
+      \field{volume}{6}
+      \field{year}{2007}
+      \field{pages}{5549\bibrangedash 5632}
+      \range{pages}{84}
+      \verb{doi}
+      \verb https://doi.org/10.1016/S1573-4412(07)06076-X
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S157344120706076X
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S157344120706076X
+      \endverb
+      \keyw{sieve extremum estimation,series,sieve minimum distance,semiparametric two-step estimation,endogeneity in semi-nonparametric models}
+    \endentry
+    \entry{Chen1999}{article}{}
+      \name{author}{2}{}{%
+        {{hash=eaefa8dd180971cfee840787cf3b798b}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaohong},
+           giveni={X\bibinitperiod}}}%
+        {{hash=5faad2d0f139e8fd3263b38eb0db3a31}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \strng{fullhash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \strng{bibnamehash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \strng{authorbibnamehash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \strng{authornamehash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \strng{authorfullhash}{632dd9ac4a6e9b07e5fd45356e26faee}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Information Theory}
+      \field{number}{2}
+      \field{title}{Improved rates and asymptotic normality for nonparametric neural network estimators}
+      \field{volume}{45}
+      \field{year}{1999}
+      \field{pages}{682\bibrangedash 691}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/18.749011
+      \endverb
+      \keyw{Neural networks;Artificial neural networks;Kernel;Feedforward neural networks;Associate members;Convergence;Finance;Statistics;Gaussian distribution}
+    \endentry
+    \entry{chernozhukov2024appliedcausalinferencepowered}{misc}{}
+      \name{author}{5}{}{%
+        {{hash=c75cbe2cefd1e532f636a50892605d06}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=b38b53cdfa3ce5b62046f22663d5cc6f}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=2db96cc54afe3fe8c684be53af54a7bf}{%
+           family={Kallus},
+           familyi={K\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod}}}%
+        {{hash=d8b1ae9734f477eac207fdb4e76b4b4d}{%
+           family={Spindler},
+           familyi={S\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=342033b26b8f8c243380f2343a53e1fa}{%
+           family={Syrgkanis},
+           familyi={S\bibinitperiod},
+           given={Vasilis},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{fullhash}{0d8de6a45591f084a2e34d1d9b60a6da}
+      \strng{bibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authorbibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authornamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authorfullhash}{0d8de6a45591f084a2e34d1d9b60a6da}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{econ.EM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Applied Causal Inference Powered by ML and AI}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2403.02467
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2403.02467
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2403.02467
+      \endverb
+    \endentry
     \entry{chetverikov2021selecting}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=ef4b66d2ca2dde47ec1b0afa98306775}{%
+        {{hash=ef4b66d2ca2dde47ec1b0afa98306775}{%
            family={Chetverikov},
            familyi={C\bibinitperiod},
            given={Denis},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=0212c870e31ec3797b020a8707857f8a}{%
+           giveni={D\bibinitperiod}}}%
+        {{hash=0212c870e31ec3797b020a8707857f8a}{%
            family={S{ø}rensen},
            familyi={S\bibinitperiod},
            given={Jesper\bibnamedelima Riis-Vestergaard},
-           giveni={J\bibinitperiod\bibinitdelim R\bibinithyphendelim V\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod\bibinitdelim R\bibinithyphendelim V\bibinitperiod}}}%
       }
       \strng{namehash}{9b3d32fcf6f18a41cc1031943c3d516a}
       \strng{fullhash}{9b3d32fcf6f18a41cc1031943c3d516a}
@@ -314,24 +447,21 @@
     \endentry
     \entry{Claeskens}{article}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=612a48fa7cf7337c63d446377b88eab2}{%
+        {{hash=612a48fa7cf7337c63d446377b88eab2}{%
            family={Claeskens},
            familyi={C\bibinitperiod},
            given={Gerda},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=8d713106b3d1e20ec2a5c492fb922ee3}{%
+           giveni={G\bibinitperiod}}}%
+        {{hash=8d713106b3d1e20ec2a5c492fb922ee3}{%
            family={Krivobokova},
            familyi={K\bibinitperiod},
            given={Tatyana},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9001b6edc4376f43834e4ff420e7b0c2}{%
+           giveni={T\bibinitperiod}}}%
+        {{hash=9001b6edc4376f43834e4ff420e7b0c2}{%
            family={Opsomer},
            familyi={O\bibinitperiod},
            given={Jean\bibnamedelima D.},
-           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
       \strng{namehash}{227536ff2deceacca9012090e5d7bcaa}
       \strng{fullhash}{227536ff2deceacca9012090e5d7bcaa}
@@ -368,32 +498,122 @@
       \verb https://doi.org/10.1093/biomet/asp035
       \endverb
     \endentry
+    \entry{Farrell2021}{article}{}
+      \name{author}{3}{}{%
+        {{hash=394a467751a7e99efa9be98d667c6540}{%
+           family={Farrell},
+           familyi={F\bibinitperiod},
+           given={Max\bibnamedelima H.},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=a8e24a47f49e951837e8883af279559e}{%
+           family={Liang},
+           familyi={L\bibinitperiod},
+           given={Tengyuan},
+           giveni={T\bibinitperiod}}}%
+        {{hash=c07fb2a9cbdcb390d4889feffe6dc98f}{%
+           family={Misra},
+           familyi={M\bibinitperiod},
+           given={Sanjog},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \strng{fullhash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \strng{bibnamehash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \strng{authorbibnamehash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \strng{authornamehash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \strng{authorfullhash}{cc86c1bdecd2d05adf7b2f7bf0bb4f03}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study deep neural networks and their use in semiparametric inference. We establish novel nonasymptotic high probability bounds for deep feedforward neural nets. These deliver rates of convergence that are sufficiently fast (in some cases minimax optimal) to allow us to establish valid second-step inference after first-step estimation with deep learning, a result also new to the literature. Our nonasymptotic high probability bounds, and the subsequent semiparametric inference, treat the current standard architecture: fully connected feedforward neural networks (multilayer perceptrons), with the now-common rectified linear unit activation function, unbounded weights, and a depth explicitly diverging with the sample size. We discuss other architectures as well, including fixed-width, very deep networks. We establish the nonasymptotic bounds for these deep nets for a general class of nonparametric regression-type loss functions, which includes as special cases least squares, logistic regression, and other generalized linear models. We then apply our theory to develop semiparametric inference, focusing on causal parameters for concreteness, and demonstrate the effectiveness of deep learning with an empirical application to direct mail marketing.}
+      \field{journaltitle}{Econometrica}
+      \field{number}{1}
+      \field{title}{Deep Neural Networks for Estimation and Inference}
+      \field{volume}{89}
+      \field{year}{2021}
+      \field{pages}{181\bibrangedash 213}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.3982/ECTA16901
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA16901
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA16901
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA16901
+      \endverb
+      \keyw{Deep learning,neural networks,rectified linear unit,nonasymptotic bounds,convergence rates,semiparametric inference,treatment effects,program evaluation}
+    \endentry
+    \entry{hastie2009elements}{book}{}
+      \name{author}{4}{}{%
+        {{hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod}}}%
+        {{hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{fullhash}{128c322c499b8780d79e31a8740aac52}
+      \strng{bibnamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authorbibnamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authornamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authorfullhash}{128c322c499b8780d79e31a8740aac52}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{volume}{2}
+      \field{year}{2009}
+    \endentry
     \entry{Kueck2023}{article}{}
       \name{author}{4}{}{%
-        {{un=0,uniquepart=base,hash=77fd62117786ff9d613beff10c9cacb8}{%
+        {{hash=77fd62117786ff9d613beff10c9cacb8}{%
            family={Kueck},
            familyi={K\bibinitperiod},
            given={Jannis},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d6c63f84450b7721a620cc1608612552}{%
+           giveni={J\bibinitperiod}}}%
+        {{hash=d6c63f84450b7721a620cc1608612552}{%
            family={Luo},
            familyi={L\bibinitperiod},
            given={Ye},
-           giveni={Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=d8b1ae9734f477eac207fdb4e76b4b4d}{%
+           giveni={Y\bibinitperiod}}}%
+        {{hash=d8b1ae9734f477eac207fdb4e76b4b4d}{%
            family={Spindler},
            familyi={S\bibinitperiod},
            given={Martin},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=79effae60e7b0773e28631e31e5226f4}{%
+           giveni={M\bibinitperiod}}}%
+        {{hash=79effae60e7b0773e28631e31e5226f4}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Zigan},
-           giveni={Z\bibinitperiod},
-           givenun=0}}%
+           giveni={Z\bibinitperiod}}}%
       }
       \strng{namehash}{2d3092d501b16785470aaa19963ebe75}
       \strng{fullhash}{bfeee73b5c14b706e06392b6d2916aa0}
@@ -429,21 +649,18 @@
     \endentry
     \entry{Friedberg2021}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=ec7d63702228b741ff93a855120ceae1}{%
+        {{hash=ec7d63702228b741ff93a855120ceae1}{%
            family={Rina\bibnamedelima Friedberg},
            familyi={R\bibinitperiod\bibinitdelim F\bibinitperiod},
            given={Susan\bibnamedelima Athey},
            giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-           givenun=0,
            suffix={Julie\bibnamedelima Tibshirani},
-           suffixi={J\bibinitperiod\bibinitdelim T\bibinitperiod},
-           suffixun=0}}%
-        {{un=0,uniquepart=base,hash=e22c2c3bb1bd12e43f46c07ea788b581}{%
+           suffixi={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=e22c2c3bb1bd12e43f46c07ea788b581}{%
            family={Wager},
            familyi={W\bibinitperiod},
            given={Stefan},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
+           giveni={S\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {ASA Website}%
@@ -480,26 +697,62 @@
       \verb https://doi.org/10.1080/10618600.2020.1831930
       \endverb
     \endentry
+    \entry{singh2023kernelridgeregressioninference}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=b417395e2c10f7be5dbda235bb6fdd4c}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a3f3b45ac5f4144e334f9a5a95dd7a14}{%
+           family={Vijaykumar},
+           familyi={V\bibinitperiod},
+           given={Suhas},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \strng{fullhash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \strng{bibnamehash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \strng{authorbibnamehash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \strng{authornamehash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \strng{authorfullhash}{32ef4c9b6a2edafd41e7b0740c271c97}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.ST}
+      \field{eprinttype}{arXiv}
+      \field{title}{Kernel Ridge Regression Inference}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2302.06578
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2302.06578
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2302.06578
+      \endverb
+    \endentry
     \entry{Spiess2023}{inproceedings}{}
       \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=2e249611355f88583165432eab0ba4e1}{%
+        {{hash=2e249611355f88583165432eab0ba4e1}{%
            family={Spiess},
            familyi={S\bibinitperiod},
            given={Jann},
-           giveni={J\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=f74fd63923a56fa58b8687fdf1cc7ff2}{%
+           giveni={J\bibinitperiod}}}%
+        {{hash=f74fd63923a56fa58b8687fdf1cc7ff2}{%
            family={Imbens},
            familyi={I\bibinitperiod},
            given={Guido},
-           giveni={G\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=6807a9725f4ffa514cf9760a97726b9b}{%
+           giveni={G\bibinitperiod}}}%
+        {{hash=6807a9725f4ffa514cf9760a97726b9b}{%
            family={Venugopal},
            familyi={V\bibinitperiod},
            given={Amar},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
+           giveni={A\bibinitperiod}}}%
       }
       \name{editor}{6}{}{%
         {{hash=6d9c5f3daf57997af27b3617ec7d1fe9}{%
@@ -566,18 +819,16 @@
     \endentry
     \entry{syrgkanis2020estimation}{misc}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=342033b26b8f8c243380f2343a53e1fa}{%
+        {{hash=342033b26b8f8c243380f2343a53e1fa}{%
            family={Syrgkanis},
            familyi={S\bibinitperiod},
            given={Vasilis},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=7e95a1d3e80cb547423ef1bb4b961e84}{%
+           giveni={V\bibinitperiod}}}%
+        {{hash=7e95a1d3e80cb547423ef1bb4b961e84}{%
            family={Zampetakis},
            familyi={Z\bibinitperiod},
            given={Manolis},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
+           giveni={M\bibinitperiod}}}%
       }
       \strng{namehash}{a9a8001b840a214e792b8147dd262ad2}
       \strng{fullhash}{a9a8001b840a214e792b8147dd262ad2}
@@ -601,12 +852,11 @@
     \endentry
     \entry{Xiao}{article}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=efc59ab67e5d51b34872a810caa296bb}{%
+        {{hash=efc59ab67e5d51b34872a810caa296bb}{%
            family={Xiao},
            familyi={X\bibinitperiod},
            given={Luo},
-           giveni={L\bibinitperiod},
-           givenun=0}}%
+           giveni={L\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Taylor \& Francis}%
