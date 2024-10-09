@@ -328,11 +328,11 @@ uniquename=false,
 		\begin{itemize}
 			\item Pode ser o conjunto de todas as variáveis, ou, em implementações computacionalmente mais tratáveis, um subconjunto aleatório das variáveis.
 		\end{itemize}
-		\item A regra de quebra (colocação das folhas) do nó $v$ é dada por $\boldsymbol{Z}_{k*}\geq c^*$, onde
+		\item A regra de quebra (colocação das folhas) do nó $v$ é dada por $\boldsymbol{Z}_{j*}\geq c^*$, onde
 		\begin{equation}
 			\begin{aligned}
-				\min_{k \in P(v)}\min_{c \in \mathbb{R}} \min_{\overline{y},\underline{y}} \sum_{i \in N(v)}(Y_i - \overline{y}\mathbf{1}\{\boldsymbol{Z}_k\geq c\} - \underline{y} \mathbf{1}\{\boldsymbol{Z}_k< c\})^2 = \\
-					\min_{k \in P(v)}\min_{c \in \mathbb{R}} \sum_{i \in N(v)}(Y_i - \bar{Y}_{\boldsymbol{Z}_k\geq c} \mathbf{1}\{\boldsymbol{Z}_k\geq c\} - \bar{Y}_{\boldsymbol{Z}_k< c} \mathbf{1}\{\boldsymbol{Z}_k< c\})^2 
+				\min_{j \in P(v)}\min_{c \in \mathbb{R}} \min_{\overline{y},\underline{y}} \sum_{i \in N(v)}(Y_i - \overline{y}\mathbf{1}\{\boldsymbol{Z}_j\geq c\} - \underline{y} \mathbf{1}\{\boldsymbol{Z}_j< c\})^2 = \\
+					\min_{j \in P(v)}\min_{c \in \mathbb{R}} \sum_{i \in N(v)}(Y_i - \bar{Y}_{\boldsymbol{Z}_j\geq c} \mathbf{1}\{\boldsymbol{Z}_j\geq c\} - \bar{Y}_{\boldsymbol{Z}_j< c} \mathbf{1}\{\boldsymbol{Z}_j< c\})^2 
 			\end{aligned}
 		\end{equation}
 	\end{itemize}
@@ -352,7 +352,7 @@ uniquename=false,
 		\item Uma possibilidade é estimar uma árvore com $T_0$ grande, e depois considerar o efeito de se desfazer alguma das quebras sobre a qualidade preditiva, {\color{blue}penalizada} pela complexidade do modelo.
 		\begin{itemize}
 			\item Isto é, denotando por $\mathcal{T}$ e $\mathcal{T}' \preceq \mathcal{T}$ uma sub-árvore obtida colapsando-se  alguns dos \textit{splits}, fazemos a poda ou \textit{pruning}:
-			$$\min_{\mathcal{T}' \preceq  \mathcal{T}} \operatorname{EQM}(\mathcal{T}' ) + \alpha |\mathcal{T}|\, ,\quad \alpha > 0$$
+			$$\min_{\mathcal{T}' \preceq  \mathcal{T}} \frac{1}{n} \sum_{i=1}^n(Y_i - \mathcal{T}'(\boldsymbol{Z}_i))^2 + \alpha |\mathcal{T}'|\, ,\quad \alpha > 0$$
 		\end{itemize}
 		 
 	\end{itemize}
@@ -382,8 +382,8 @@ uniquename=false,
 		$$\frac{1}{2}\mathbb{E}[(Y-\hat{h}_j(\boldsymbol{Z}))^2|\boldsymbol{Z}]\, ,$$
 		dada a convexidade da função objetivo, sabemos que isso poderia ser  obtido fazendo
 		$\tilde{h}_{j+1}(\boldsymbol{Z}) = \hat{h}_{j+1}(\boldsymbol{Z}) +\delta \mathbb{E}[(Y-\hat{h}_j(\boldsymbol{Z}))|\boldsymbol{Z}]$
-		para $\delta>0$.
-		
+		para $\delta\in (0,1)$. \hyperlink{grad_desc}{\beamergotobutton{Detalhes}}
+		\label{boosting}
 	\end{itemize}
 \end{frame}
 \begin{frame}{Boosting (cont.)}
@@ -545,6 +545,28 @@ $$\text{Output}=f\left(\sum_{j=1}^n w_j x_j\right)$$
 \end{frame}
 
 	\appendix
+	
+	\begin{frame}{Derivação da descida do gradiente}
+		\label{grad_desc}
+		\begin{itemize}
+			\item Uma função convexa $\psi:\mathbb{R}\mapsto \mathbb{R}$ satisfaz:
+			$$\psi(a)-\psi(b)\geq \psi'(b)(a-b)\, .$$
+			\item Usando convexidade de $x \mapsto \frac{1}{2}(Y-x)^2$, temos, para estimadores $\hat{h}_j(\boldsymbol{Z})$ e $\tilde{h}_{j+1}(\boldsymbol{Z})$.
+			$$\frac{1}{2} (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))^2 - \frac{1}{2}(Y- \hat{h}_{j}(\boldsymbol{Z}))^2 \leq (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))(\tilde{h}_{j+1}(\boldsymbol{Z}) - \hat{h}_{j}(\boldsymbol{Z}))\, ,   $$
+			tomando a esperança condicional a $\boldsymbol{Z}$, temos:
+			\begin{equation*}
+				\begin{aligned}
+							\frac{1}{2} \mathbb{E}[(Y- \tilde{h}_{j+1}(\boldsymbol{Z}))^2|\boldsymbol{Z}] - \frac{1}{2}\mathbb{E}[(Y- \hat{h}_{j}(\boldsymbol{Z}))^2|\boldsymbol{Z}] \leq \\ 
+							-\mathbb{E}[(Y- \tilde{h}_{j+1}(\boldsymbol{Z}))|\boldsymbol{Z}](\tilde{h}_{j+1}(\boldsymbol{Z}) - \hat{h}_{j}(\boldsymbol{Z}))\, , 
+				\end{aligned}
+			\end{equation*}
+			\item Tomando $ (\tilde{h}_{j+1}(\boldsymbol{Z}) - \hat{h}_{j}(\boldsymbol{Z})) = \delta \mathbb{E}[(Y- \hat{h}_{j}(\boldsymbol{Z}))|\boldsymbol{Z}]$, o limite superior fica:
+			
+			$$(\delta^2 -\delta )\mathbb{E}[(Y- \hat{h}_{j}(\boldsymbol{Z}))|\boldsymbol{Z}]^2 \, ,$$
+			que é negativo para $0 < \delta < 1$.	\hyperlink{boosting}{\beamerreturnbutton{Voltar}}
+		
+		\end{itemize}
+	\end{frame}
 		\begin{frame}[allowframebreaks]{Bibliografia}
 	\printbibliography
 
