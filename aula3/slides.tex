@@ -1,0 +1,192 @@
+% !TeX document-id = {0be8c18c-9430-4e9a-bdd9-12beadebfebc}
+% !TeX TXS-program:bibliography = txs:///biber
+\documentclass[11pt]{beamer}
+\uselanguage{portuguese}
+\languagepath{portuguese}
+\deftranslation[to=portuguese]{Theorem}{Teorema}
+\deftranslation[to=portuguese]{theorem}{teorema}
+\deftranslation[to=portuguese]{Example}{Exemplo}
+\deftranslation[to=portuguese]{example}{exemplo}
+\deftranslation[to=portuguese]{Lemma}{Lema}
+\deftranslation[to=portuguese]{lemma}{Lema}
+\deftranslation[to=portuguese]{Corollary}{Corolário}
+\deftranslation[to=portuguese]{corollary}{corolário}
+%\deftranslation[to=portuguese]{and}{e}
+
+\usepackage[brazilian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{color}
+\usepackage{pgfplots}
+\usepackage{tikz}
+
+%\usepackage{appendixnumberbeamer}
+
+\newenvironment{transitionframe}{
+	\setbeamercolor{background canvas}{bg=yellow}
+	\begin{frame}}{
+	\end{frame}
+}
+\usetheme{default}
+\usefonttheme{structuresmallcapsserif}
+
+%% I use a beige off white for my background
+\definecolor{MyBackground}{RGB}{255,253,218}
+\useinnertheme[shadow]{rounded}
+\setbeamercolor{block title}{bg=MyBackground}
+\setbeamercolor{block body}{bg=MyBackground}
+\setbeamercolor{example title}{bg=MyBackground}
+\setbeamercolor{example body}{bg=MyBackground}
+
+
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\purple}[1]{\textcolor{purple}{#1}}
+\newcommand{\gray}[1]{\textcolor{gray}{#1}}
+\setbeamertemplate{navigation symbols}{}
+%\setbeamertemplate{page number in head/foot}[appendixframenumber]
+
+%\usepackage{graphics}
+\usepackage{graphicx}
+
+\definecolor{blue_emph}{RGB}{0,114,178}
+\definecolor{red}{RGB}{213,94,0}
+\definecolor{yellow}{RGB}{240,228,66}
+\definecolor{green}{RGB}{0,158,115}
+\definecolor{purple}{RGB}{204,121,167}
+\definecolor{orange}{RGB}{230,159,0}
+\definecolor{lightblue}{RGB}{86,180,233}
+
+%\setbeamercolor{frametitle}{fg=blue}
+%\setbeamercolor{title}{fg=blue}
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{} 
+\setbeamertemplate{itemize items}{-}
+%\setbeamercolor{itemize item}{fg=blue}
+%\setbeamercolor{itemize subitem}{fg=blue}
+\setbeamertemplate{enumerate items}[default]
+%\setbeamercolor{enumerate subitem}{fg=blue}
+\setbeamercolor{button}{bg=MyBackground,fg=blue}
+\usefonttheme{structuresmallcapsserif}
+
+%\setbeamercolor{section in toc}{fg=blue}
+%\setbeamercolor{subsection in toc}{fg=red}
+\setbeamersize{text margin left=1em,text margin right=1em} 
+
+
+\usepackage{appendixnumberbeamer}
+
+\usepackage[
+backend=biber,
+style=authoryear,
+natbib=true,
+uniquename=false,
+]{biblatex}
+\addbibresource{../bibliography.bib}
+
+\newenvironment{wideitemize}{\itemize\addtolength{\itemsep}{10pt}}{\enditemize}
+\newenvironment{wideenumerate}{\enumerate\addtolength{\itemsep}{10pt}}{\endenumerate}
+\newenvironment{halfwideitemize}{\itemize\addtolength{\itemsep}{0.5em}}{\enditemize}
+\newenvironment{halfwideenumerate}{\enumerate\addtolength{\itemsep}{0.5em}}{\endenumerate}
+
+
+\author{Luis A. F. Alvarez}
+\title{Introdução à Econometria Semiparamétrica}
+\subtitle{Aula 3 - Estimação Semiparamétrica}
+%\logo{}
+%\institute{}
+\date{\today}
+%\subject{}
+%\setbeamercovered{transparent}
+
+\begin{document}
+
+	\begin{frame}[plain]
+	\maketitle
+	\end{frame}
+	\begin{frame}
+		conteúdo...
+	\end{frame}
+
+		\begin{frame}[allowframebreaks]{Bibliografia}
+	\printbibliography
+
+	\end{frame}
+	
+	\begin{frame}{Exemplo}
+		\begin{itemize}
+			\item Considere uma população de interesse em que definimos um tratamento individual binário, denotado por uma variável aleatória, $D \in \{0,1\}$ e um resultado de interesse $Y$.
+			\begin{itemize}
+				\item Os resultados potenciais, que descrevem o que acontece com um indivíduo caso ele seja alocado ao tratamento ou não, são dados por $(Y(0),Y(1))$, de modo que o resultado observado é dado por $Y = DY(0)+(1-D)Y(1)$ e o efeito da política é $Y(1)-Y(0)$ .
+			\end{itemize}
+			\item Sejam $X$ um vetor de características observáveis, tais que seja razoável supor que:
+			
+			$$Y(0)\perp D | X$$
+		\end{itemize}
+	\end{frame}
+	\begin{frame}{Estimação do ATT}
+		\begin{itemize}
+			\item Sob a hipótese de identificação anterior, se supomos que 	$\mathbb{P}[D=1]> 0$ e a seguinte hipótese de suporte comum (\textit{overlap}):
+			
+			$$\exists \epsilon > 0, \quad \mathbb{P}[\mathbb{P}[D=0|X]\geq \epsilon] = 1 $$
+		
+			\item Então é possível identificar o efeito médio do tratamento nos tratados, 
+			$$\mathbb{E}[Y(1)-Y(0)|D=1] = \frac{\mathbb{E}[DY]}{\mathbb{E}[D]} - \mathbb{E}\left[\frac{1}{1-\mathbb{P}[D=1|X=1]}(1-D)Y\right]$$
+			\item O problema é que a hipótese de suporte comum pode ser irrazoável em alguns contextos.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Combinações convexas do ATT}
+		\begin{itemize}
+			\item Considere, como alternativa, o estimando $\beta^*$ que resolve
+			
+			$$(\beta^*,g) = \operatorname{argmin}_{{b\in \mathbb{R}, h \in \mathcal{H}}} \mathbb{E}[(Y-bD - h(X))^2]\, ,$$
+			onde $\mathcal{H}$ é um sub-espaço fechado de $L_2(\mathbb{P}_X)$.
+			\item Nesse caso, é possível mostrar que, {\color{blue}se $\mathbb{P}[D=1|X]\in \mathcal{H}$ ou $\mathbb{E}[Y(0)|X] \in \mathcal{H}$}, então:
+			
+			$$\beta^* = \frac{\mathbb{E}[\mathbb{E}[Y(1)-Y(0)|X](D-v(X))^2 ]}{\mathbb{E}[(D-v(X))^2]}$$
+			onde $v(X) = \operatorname{argmin}_{h \in \mathcal{H}} \mathbb{E}[(D-v(X))^2]$.
+			\item Resultado é extensão direta de \citet{Angrist1998}.
+			\item Estimando é uma combinação convexa de ATTs, dando mais peso para pontos do suporte com melhor sobreposição.
+			\begin{itemize}
+				\item Combinação convexa mais fácil de se estimar eficientemente \citep{contaminationbias}, sob algumas hipóteses.
+			\end{itemize}
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Estimando $\beta^*$}
+		\begin{itemize}
+			\item Com base no resultado anterior e uma amostra aleatória da população, poderíamos tentar estimar $\beta^*$ resolvendo o análogo amostral do problema.
+			\begin{itemize}
+				\item Para implementar a classes ``complexas'' $\mathcal{H}$, podemos alternar o estimador de MQO dos resíduos $(Y_i-\tilde{g}(X_i))$ em $D_i$ e o estimador que projeta $Y_i - \tilde{\beta} D_i$ em $\mathcal{H}$ até convergência.
+			\end{itemize} 
+			\item Note, entretanto, que para a representação anterior valer, devemos escolher uma classe suficiente expressiva para representar ou $\mathbb{E}[Y(0)|X]$ ou $\mathbb{P}[D=1|X]$.
+			\begin{itemize}
+				\item Além disso, se temos muitos possíveis controles, mas somente um subconjunto deve ser relevante para explicar a seleção ao tratamento, deveríamos utilizar métodos de alta dimensão válidos sob esparsidade aproximada. 
+			\end{itemize}
+			\item Estimador resultante é dado por:
+			
+			$$\hat{\beta} =\frac{1}{n} \frac{  \sum_{i=1}^nD_i (Y_i - \hat{g}(X_i))}{\mathbb{E}_n D^2}\, ,$$
+				
+				onde $\mathbb{E}_n X$ é  abreviatura para $\frac{1}{n}\sum_{i=1}^n X_i$.
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Aproximação assintótica do estimador}
+		\(\sqrt{n}\left(\hat{\beta}_{0}-\beta^*\right)=\underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i} U_{i}}_{=:a}+\underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i}\left(g\left(X_{i}\right)-\hat{g}\left(X_{i}\right)\right)}_{=:b}\)
+		onde $U_i = Y_i - \beta^* D_i - g(X_i)$
+		\begin{itemize}
+			\item Termo $a$ é bem comportado em amostras grandes $a\overset{d}{\to} N(0,\sigma^2)$.
+			\item No entanto, termo $b$ é dado por:
+			\(b=\left(E\left[D_{i}^{2}\right]\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} m_{0}\left(X_{i}\right)\left(g_{0}\left(X_{i}\right)-\hat{g}_{0}\left(X_{i}\right)\right)+o_{P}(1)\)
+			esse termo não é bem comportado para estimadores não paramétricos modernos.
+		\end{itemize}
+	\end{frame}
+	
+
+\end{document}
+
