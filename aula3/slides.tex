@@ -108,14 +108,7 @@ uniquename=false,
 	\begin{frame}[plain]
 	\maketitle
 	\end{frame}
-	\begin{frame}
-		conteúdo...
-	\end{frame}
 
-		\begin{frame}[allowframebreaks]{Bibliografia}
-	\printbibliography
-
-	\end{frame}
 	
 	\begin{frame}{Exemplo}
 		\begin{itemize}
@@ -148,8 +141,8 @@ uniquename=false,
 			onde $\mathcal{H}$ é um sub-espaço fechado de $L_2(\mathbb{P}_X)$.
 			\item Nesse caso, é possível mostrar que, {\color{blue}se $\mathbb{P}[D=1|X]\in \mathcal{H}$ ou $\mathbb{E}[Y(0)|X] \in \mathcal{H}$}, então:
 			
-			$$\beta^* = \frac{\mathbb{E}[\mathbb{E}[Y(1)-Y(0)|X](D-v(X))^2 ]}{\mathbb{E}[(D-v(X))^2]}$$
-			onde $v(X) = \operatorname{argmin}_{h \in \mathcal{H}} \mathbb{E}[(D-v(X))^2]$.
+			$$\beta^* = \frac{\mathbb{E}[\mathbb{E}[Y(1)-Y(0)|X](D-m(X))^2 ]}{\mathbb{E}[(D-m(X))^2]}$$
+			onde $m(X) = \operatorname{argmin}_{h \in \mathcal{H}} \mathbb{E}[(D-h(X))^2]$.
 			\item Resultado é extensão direta de \citet{Angrist1998}.
 			\item Estimando é uma combinação convexa de ATTs, dando mais peso para pontos do suporte com melhor sobreposição.
 			\begin{itemize}
@@ -177,16 +170,135 @@ uniquename=false,
 	\end{frame}
 	
 	\begin{frame}{Aproximação assintótica do estimador}
-		\(\sqrt{n}\left(\hat{\beta}_{0}-\beta^*\right)=\underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i} U_{i}}_{=:a}+\underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i}\left(g\left(X_{i}\right)-\hat{g}\left(X_{i}\right)\right)}_{=:b}\)
-		onde $U_i = Y_i - \beta^* D_i - g(X_i)$
+		\begin{equation*}
+			\footnotesize 
+			\begin{aligned}
+						\sqrt{n}\left(\hat{\beta}_{0}-\beta^*\right)=\\ \underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i} U_{i}}_{=:a}+\underbrace{\left(\frac{1}{n} \sum_{i \in I} D_{i}^{2}\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} D_{i}\left(g\left(X_{i}\right)-\hat{g}\left(X_{i}\right)\right)}_{=:b}
+			\end{aligned}
+		\end{equation*}
+						onde $U_i = Y_i - \beta^* D_i - g(X_i)$.
+
 		\begin{itemize}
 			\item Termo $a$ é bem comportado em amostras grandes $a\overset{d}{\to} N(0,\sigma^2)$.
 			\item No entanto, termo $b$ é dado por:
 			\(b=\left(E\left[D_{i}^{2}\right]\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} m_{0}\left(X_{i}\right)\left(g_{0}\left(X_{i}\right)-\hat{g}_{0}\left(X_{i}\right)\right)+o_{P}(1)\)
-			esse termo não é bem comportado para estimadores não paramétricos modernos.
+			\item Esse termo não é bem comportado para estimadores não paramétricos, especialmente modernos.
+			\begin{itemize}
+				\item Comparar EQM do MQO com outras alternativas que operam no trade-off viés variância.
+				\begin{itemize}
+				\item No MQO, $\sqrt{n}(\hat{\delta}'x - \delta_0'x) \overset{d}{\to}N(0, x'\Sigma^2_{\hat{\delta}}x)$, de modo que esperamos que, em amostras grandes, $\infty>\mathbb{V}[b] > 0$, mas $\mathbb{E}[b]\approx 0$.
+				\item Para estimadores não paramétricos modernos que operam no tradeoff vié-variância $\mathbb{E}[b] = \frac{1}{n^{-1/2 + \psi}}$, para $\psi < -1/2$ (ver exemplo do Lasso.). 
+				\item Distribuição arbitrariamente não centrada em $\beta^*$ em amostras grandes.
+				 \end{itemize}
+			\end{itemize}
 		\end{itemize}
 	\end{frame}
 	
+	\begin{frame}{Exemplo: viés  na distribuição do estimador semiparamétrico ``ingênuo''}
+	\centering
+	\includegraphics[scale=0.5]{graficos/naive.png}
+	\end{frame}
+	\begin{frame}{Estimador alternativo}
+		\begin{itemize}
+			\item É possível mostrar que parâmetro de interesse pode ser identificado como:
+			
+			$$\beta^*  =  \frac{\mathbb{E}[(Y_i - g(X))(D-m(X)) ]}{\mathbb{E}[(D-m(X))D]}$$
+			\item Considere então:
+			
+			$$\check{\beta}=\left(\frac{1}{n} \sum_{i \in I} \hat{V}_{i} D_{i}\right)^{-1} \frac{1}{n} \sum_{i \in I} \hat{V}_{i}\left(Y_{i}-\hat{g}_{0}\left(X_{i}\right)\right)\,, $$
+			onde $\hat{V}_i = D_i - \hat{m}(X_i)$.
 
+			
+		\end{itemize}
+	\end{frame}
+
+\begin{frame}{Propriedades do estimador alternativo.}
+	\begin{itemize}
+				\item Estimador escrever-se-á como:
+	$$\sqrt{n}(\check{\beta} - \beta^*) =  a+b+c +o_{\mathbb{P}}(1)\, ,$$
+	onde 
+	\begin{enumerate}
+		\item $a^{*}=\left(E\left[V^{2}\right]\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I} V_{i} U_{i} \overset{d}{\to} N(0, \sigma^2)$
+		\begin{itemize}
+			\item Termo bem comportado, como antes
+		\end{itemize}
+		\item $b^{*}=\left(E\left[V^{2}\right]\right)^{-1} \frac{1}{\sqrt{n}} \sum_{i \in I}\left(\hat{m}\left(X_{i}\right)-m\left(X_{i}\right)\right)\left(\hat{g}\left(X_{i}\right)-g\left(X_{i}\right)\right)$
+		\begin{itemize}
+			\item Agora, viés dos estimadores não paramétricos podem decair para zero a $n^{-1/4}$ e $b^* = o_{\mathbb{P}}(1)$.
+		\end{itemize}
+			\item {\footnotesize$c^{*}=\left(E\left[V^{2}\right]\right)^{-1} \left[\frac{1}{\sqrt{n}} \sum_{i \in I}U_i \left(\hat{m}\left(X_{i}\right)-m\left(X_{i}\right)\right)+ \frac{1}{\sqrt{n}} \sum_{i \in I}V_i\left(\hat{g}\left(X_{i}\right)-m\left(X_{i}\right)\right)\right] $}
+			\begin{itemize}
+				\item Termo captura a correlação dos estimadores com componente idiossincrático da amostra.
+				\item Caso haja algum sobreajuste, esse termo não desaparecerá, produzindo vieses.
+				\item \textbf{Solução:} estimar as funções não paramétricas em outra amostra $I^{\complement}$ tal que $I \cap I^{\complement}$.
+					\item Nesse caso, garantiremos que esse termo possui média zero (por quê?) e que $c^* = o_{\mathbb{P}}(1)$.
+			\end{itemize}
+	\end{enumerate}			
+\end{itemize}
+\end{frame}
+\begin{frame}{\textit{Debiased machine learning}}
+\begin{itemize}
+	\item A estratégia anterior de utilização de aprendizagem estatística para a estimação de parâmetros consistiu de dois ingredientes cruciais.
+	\begin{itemize}
+		\item Um ajuste na fórmula do estimador como forma de reduzir o viés devido a regularização de estimadores que operam no trade-off viés-variância para reduzir EQM.
+		\item \textit{Sample-splitting} como forma de remover o viés de sobreajuste que seria gerado em modelos muito complexos.
+	\end{itemize}
+	\item Esse método recebeu na literatura o nome de \textit{debiased machine learning} (DML) \citep{Chernozhukov2018}.
+	\item No que segue, vamos estudar como encontrar a correção do viés genericamente.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Função influência}
+	\begin{itemize}
+		\item Seja $\hat{\theta}$ um estimador de um parâmetro escalar de interesse.
+		\begin{itemize}
+			\item Seja $\theta(P)$ o limite de probabilidade do estimador, quando a distribuição verdadeira dos observáveis, $S$, é $P$.
+			\item Vamos focar no caso \textit{não-paramétrico}, em que $P$ pode ser ``qualquer'' distribuição de probabilidade sobre $S$, a não ser por condições de regularidade.
+		\end{itemize}
+		\item Nesse caso, definimos a função influência de $\hat{\theta}$ como o mapa $\psi(S;P)$ tal que, para ``qualquer'' distribuição $H$:
+		
+	$$\frac{d}{d\tau}\theta(P_{\tau})\Big|_{\tau = 0}:=\lim_{\tau \to 0 } \frac{\theta( P + \tau(H-P))-\theta( P)}{\tau} = \int \psi(s;P) H(ds)\,,$$
+	onde $P_{\tau} = P + \tau(H-P)$.
+	\begin{itemize}
+		\item Nome função influência vem do fato de que, heuristicamente, ela nos dá o efeito sobre o viés do estimador de se incluir uma observação ``contaminada'' na amostra.
+		\item Aplicações em estimação robusta \citep{rousseeuw1986robust} e na construção de estimadores eficientes em modelos semiparamétricos estritos (em que $P$ não pode ser qualquer coisa) \citep{newey1990semiparametric,bickel1993efficient}.
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Cálculo da função influência e suas propriedades}
+\begin{itemize}
+	\item 	Existe uma literatura bastante consolidada sobre como computar $\psi(S;P)$ na prática, que não entraremos por limitações de tempo.
+	\begin{itemize}
+		\item Veja \citet{Ichimura2022} e \citet{kennedy2023semiparametric} para métodos.
+	\end{itemize}
+	\item Somente notamos as seguintes propriedades de funções influência, que nos serão úteis a seguir.
+	
+	$$\int \psi(s;P) P(ds) = 0$$
+	$$\int \frac{d}{d \tau}\psi(s;P_\tau)\Big|_{\tau = 0} P(ds) = - \int \psi(s;P) H(ds) $$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Um problema de estimação semiparamétrica}
+\begin{itemize}
+	\item Nesta aula, vamos focar no seguinte problema de função semiparamétrica. O objetivo é estimar
+	
+	$$\theta_0 := \mathbb{E}[m(S;\gamma_0)]\,,$$
+	onde $\gamma_0$ é uma função que desejamos aproximar não parametricamente (e.g. uma esperança condicional, quantil condicional ou densidade).
+	
+	\item Nós propomos estimar $\theta_0$ partindo da seguinte condição de momento:
+	
+	$$ \mathbb{E}[m(S;\gamma_0) + \psi(s;P_0)] - \theta_0 = 0\,,$$
+	onde $P_0$ é a distribuição verdadeira, e $\psi(s;P_0)$ é a {\color{blue}função influência de primeiro-estágio} de se perturbar a parte não paramétrica:
+	
+	$$\frac{d}{d \tau}\mathbb{E}[m(S;\gamma(P_0+\tau (H-P_0)))]\Big|_{\tau=0} = \int \psi(s;P_0)H(ds)$$
+	
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]{Bibliografia}
+	\printbibliography
+	
+\end{frame}
 \end{document}
 

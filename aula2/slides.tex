@@ -412,7 +412,7 @@ uniquename=false,
 	\begin{itemize}
 		\item No \textit{bagging}, isso é feito ajustando-se a $j$-ésima árvore numa amostra de $n$ observações sorteada \textbf{com reposição} dos dados.
 	\end{itemize}
-			\item Estimador resultante é dado por $\frac{1}{S}\sum_{j=1}^J \hat{h}_j$ e é conhecido como \textit{random forest}.
+			\item Estimador resultante é dado por $\frac{1}{S}\sum_{s=1}^S\hat{h}_s$ e é conhecido como \textit{random forest}.
 			
 \end{itemize}
 \end{frame}
@@ -552,7 +552,7 @@ $$\text{Output}=f\left(\sum_{j=1}^n w_j x_j\right)$$
 			\item Uma função convexa $\psi:\mathbb{R}\mapsto \mathbb{R}$ satisfaz:
 			$$\psi(a)-\psi(b)\geq \psi'(b)(a-b)\, .$$
 			\item Usando convexidade de $x \mapsto \frac{1}{2}(Y-x)^2$, temos, para estimadores $\hat{h}_j(\boldsymbol{Z})$ e $\tilde{h}_{j+1}(\boldsymbol{Z})$.
-			$$\frac{1}{2} (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))^2 - \frac{1}{2}(Y- \hat{h}_{j}(\boldsymbol{Z}))^2 \leq (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))(\tilde{h}_{j+1}(\boldsymbol{Z}) - \hat{h}_{j}(\boldsymbol{Z}))\, ,   $$
+			$$\frac{1}{2} (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))^2 - \frac{1}{2}(Y- \hat{h}_{j}(\boldsymbol{Z}))^2 \leq - (Y- \tilde{h}_{j+1}(\boldsymbol{Z}))(\tilde{h}_{j+1}(\boldsymbol{Z}) - \hat{h}_{j}(\boldsymbol{Z}))\, ,   $$
 			tomando a esperança condicional a $\boldsymbol{Z}$, temos:
 			\begin{equation*}
 				\begin{aligned}

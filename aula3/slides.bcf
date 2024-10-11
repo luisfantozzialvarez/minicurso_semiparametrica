@@ -2364,6 +2364,12 @@
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">Angrist1998</bcf:citekey>
     <bcf:citekey order="2" intorder="1">contaminationbias</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">Chernozhukov2018</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">rousseeuw1986robust</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">newey1990semiparametric</bcf:citekey>
+    <bcf:citekey order="5" intorder="2">bickel1993efficient</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Ichimura2022</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">kennedy2023semiparametric</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

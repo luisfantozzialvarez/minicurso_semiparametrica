@@ -62,6 +62,136 @@
       \verb http://www.jstor.org/stable/2998558
       \endverb
     \endentry
+    \entry{bickel1993efficient}{book}{}
+      \name{author}{7}{}{%
+        {{hash=4cbb7e2b2b68aff0e8c8ad3f0cf5f335}{%
+           family={Bickel},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=57188d8fee8b891b8fc4be7985741a7c}{%
+           family={Klaassen},
+           familyi={K\bibinitperiod},
+           given={Chris\bibnamedelima AJ},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=4cbb7e2b2b68aff0e8c8ad3f0cf5f335}{%
+           family={Bickel},
+           familyi={B\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=aa1c3821bc1014ab941adf81a54bcda0}{%
+           family={Ritov},
+           familyi={R\bibinitperiod},
+           given={Ya’acov},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=754cb11c3cede6ce1e783f502a9182dc}{%
+           family={Klaassen},
+           familyi={K\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=363d21d4cc0f18259dc989aee106e978}{%
+           family={Wellner},
+           familyi={W\bibinitperiod},
+           given={Jon\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0321cb280518f1207c6da83ced8d334b}{%
+           family={Ritov},
+           familyi={R\bibinitperiod},
+           given={YA'Acov},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{3c0d985ca8a124180774b1a3e18d1a7b}
+      \strng{fullhash}{91e25e7bd176ea76c258fc85435a8ed9}
+      \strng{bibnamehash}{3c0d985ca8a124180774b1a3e18d1a7b}
+      \strng{authorbibnamehash}{3c0d985ca8a124180774b1a3e18d1a7b}
+      \strng{authornamehash}{3c0d985ca8a124180774b1a3e18d1a7b}
+      \strng{authorfullhash}{91e25e7bd176ea76c258fc85435a8ed9}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Efficient and adaptive estimation for semiparametric models}
+      \field{volume}{4}
+      \field{year}{1993}
+    \endentry
+    \entry{Chernozhukov2018}{article}{}
+      \name{author}{7}{}{%
+        {{hash=c75cbe2cefd1e532f636a50892605d06}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ef4b66d2ca2dde47ec1b0afa98306775}{%
+           family={Chetverikov},
+           familyi={C\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d3c2cc443c71254678269de10d61d61c}{%
+           family={Demirer},
+           familyi={D\bibinitperiod},
+           given={Mert},
+           giveni={M\bibinitperiod}}}%
+        {{hash=7e6b0ea4eee38822cdb0a4361e98752c}{%
+           family={Duflo},
+           familyi={D\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b38b53cdfa3ce5b62046f22663d5cc6f}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9c98526d9f1775b95096664c9cf0c633}{%
+           family={Newey},
+           familyi={N\bibinitperiod},
+           given={Whitney},
+           giveni={W\bibinitperiod}}}%
+        {{hash=bf615cc72310078c444f0c653a1fc5e7}{%
+           family={Robins},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{fullhash}{7892f5fdea2b46a0fb4e6c031c27c781}
+      \strng{bibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authorbibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authornamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{authorfullhash}{7892f5fdea2b46a0fb4e6c031c27c781}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{{We revisit the classic semi‐parametric problem of inference on a low‐dimensional parameter θ0 in the presence of high‐dimensional nuisance parameters η0. We depart from the classical setting by allowing for η0 to be so high‐dimensional that the traditional assumptions (e.g. Donsker properties) that limit complexity of the parameter space for this object break down. To estimate η0, we consider the use of statistical or machine learning (ML) methods, which are particularly well suited to estimation in modern, very high‐dimensional cases. ML methods perform well by employing regularization to reduce variance and trading off regularization bias with overfitting in practice. However, both regularization bias and overfitting in estimating η0 cause a heavy bias in estimators of θ0 that are obtained by naively plugging ML estimators of η0 into estimating equations for θ0. This bias results in the naive estimator failing to be N−1/2 consistent, where N is the sample size. We show that the impact of regularization bias and overfitting on estimation of the parameter of interest θ0 can be removed by using two simple, yet critical, ingredients: (1) using Neyman‐orthogonal moments/scores that have reduced sensitivity with respect to nuisance parameters to estimate θ0; (2) making use of cross‐fitting, which provides an efficient form of data‐splitting. We call the resulting set of methods double or debiased ML (DML). We verify that DML delivers point estimators that concentrate in an N−1/2‐neighbourhood of the true parameter values and are approximately unbiased and normally distributed, which allows construction of valid confidence statements. The generic statistical theory of DML is elementary and simultaneously relies on only weak theoretical requirements, which will admit the use of a broad array of modern ML methods for estimating the nuisance parameters, such as random forests, lasso, ridge, deep neural nets, boosted trees, and various hybrids and ensembles of these methods. We illustrate the general theory by applying it to provide theoretical properties of the following: DML applied to learn the main regression parameter in a partially linear regression model; DML applied to learn the coefficient on an endogenous variable in a partially linear instrumental variables model; DML applied to learn the average treatment effect and the average treatment effect on the treated under unconfoundedness; DML applied to learn the local average treatment effect in an instrumental variables setting. In addition to these theoretical applications, we also illustrate the use of DML in three empirical examples.}}
+      \field{issn}{1368-4221}
+      \field{journaltitle}{The Econometrics Journal}
+      \field{month}{01}
+      \field{number}{1}
+      \field{title}{{Double/debiased machine learning for treatment and structural parameters}}
+      \field{volume}{21}
+      \field{year}{2018}
+      \field{pages}{C1\bibrangedash C68}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1111/ectj.12097
+      \endverb
+      \verb{eprint}
+      \verb https://academic.oup.com/ectj/article-pdf/21/1/C1/27684918/ectj00c1.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1111/ectj.12097
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1111/ectj.12097
+      \endverb
+    \endentry
     \entry{contaminationbias}{misc}{}
       \name{author}{3}{}{%
         {{hash=f3ca973d5895ae6e5e148903f7218eca}{%
@@ -105,6 +235,153 @@
       \verb{url}
       \verb https://arxiv.org/abs/2106.05024
       \endverb
+    \endentry
+    \entry{Ichimura2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=d0d261351e2d86ceaf41d62b7d7308f9}{%
+           family={Ichimura},
+           familyi={I\bibinitperiod},
+           given={Hidehiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=058d74ae5e89fbd5a49ebdbe97b4c922}{%
+           family={Newey},
+           familyi={N\bibinitperiod},
+           given={Whitney\bibnamedelima K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \strng{fullhash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \strng{bibnamehash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \strng{authorbibnamehash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \strng{authornamehash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \strng{authorfullhash}{7f8910e13cfc7495dbba78b31fefda4a}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{There are many economic parameters that depend on nonparametric first steps. Examples include games, dynamic discrete choice, average exact consumer surplus, and treatment effects. Often estimators of these parameters are asymptotically equivalent to a sample average of an object referred to as the influence function. The influence function is useful in local policy analysis, in evaluating local sensitivity of estimators, and constructing debiased machine learning estimators. We show that the influence function is a Gateaux derivative with respect to a smooth deviation evaluated at a point mass. This result generalizes the classic Von Mises (1947) and Hampel (1974) calculation to estimators that depend on smooth nonparametric first steps. We give explicit influence functions for first steps that satisfy exogenous or endogenous orthogonality conditions. We use these results to generalize the omitted variable bias formula for regression to policy analysis for and sensitivity to structural changes. We apply this analysis and find no sensitivity to endogeneity of average equivalent variation estimates in a gasoline demand application.}
+      \field{journaltitle}{Quantitative Economics}
+      \field{number}{1}
+      \field{title}{The influence function of semiparametric estimators}
+      \field{volume}{13}
+      \field{year}{2022}
+      \field{pages}{29\bibrangedash 61}
+      \range{pages}{33}
+      \verb{doi}
+      \verb https://doi.org/10.3982/QE826
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/QE826
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/QE826
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/QE826
+      \endverb
+      \keyw{Influence function,semiparametric estimation,NPIV,C13,C14,C20,C26,C36}
+    \endentry
+    \entry{kennedy2023semiparametric}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c6b5587c511fc918dbab2afc11b7400e}{%
+           family={Kennedy},
+           familyi={K\bibinitperiod},
+           given={Edward\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{c6b5587c511fc918dbab2afc11b7400e}
+      \strng{fullhash}{c6b5587c511fc918dbab2afc11b7400e}
+      \strng{bibnamehash}{c6b5587c511fc918dbab2afc11b7400e}
+      \strng{authorbibnamehash}{c6b5587c511fc918dbab2afc11b7400e}
+      \strng{authornamehash}{c6b5587c511fc918dbab2afc11b7400e}
+      \strng{authorfullhash}{c6b5587c511fc918dbab2afc11b7400e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{stat.ME}
+      \field{eprinttype}{arXiv}
+      \field{title}{Semiparametric doubly robust targeted double machine learning: a review}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2203.06469
+      \endverb
+    \endentry
+    \entry{newey1990semiparametric}{article}{}
+      \name{author}{1}{}{%
+        {{hash=058d74ae5e89fbd5a49ebdbe97b4c922}{%
+           family={Newey},
+           familyi={N\bibinitperiod},
+           given={Whitney\bibnamedelima K},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \strng{fullhash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \strng{bibnamehash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \strng{authorbibnamehash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \strng{authornamehash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \strng{authorfullhash}{058d74ae5e89fbd5a49ebdbe97b4c922}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of applied econometrics}
+      \field{number}{2}
+      \field{title}{Semiparametric efficiency bounds}
+      \field{volume}{5}
+      \field{year}{1990}
+      \field{pages}{99\bibrangedash 135}
+      \range{pages}{37}
+    \endentry
+    \entry{rousseeuw1986robust}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=72d8129c9f4e6afddacb834fb2d8226f}{%
+           family={Rousseeuw},
+           familyi={R\bibinitperiod},
+           given={Peter\bibnamedelima J},
+           giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=e1c66fee7fa56b61f243e6349616780e}{%
+           family={Hampel},
+           familyi={H\bibinitperiod},
+           given={Frank\bibnamedelima R},
+           giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=a0df24422fc054a526e7045e07516df4}{%
+           family={Ronchetti},
+           familyi={R\bibinitperiod},
+           given={Elvezio\bibnamedelima M},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=161b9f6546368301e273d8478b7eb1c7}{%
+           family={Stahel},
+           familyi={S\bibinitperiod},
+           given={Werner\bibnamedelima A},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley, New York}%
+      }
+      \strng{namehash}{bb279c2b8750cd2f331793dc7a30ff7a}
+      \strng{fullhash}{2990130be057668a8a2e67eb622ca143}
+      \strng{bibnamehash}{bb279c2b8750cd2f331793dc7a30ff7a}
+      \strng{authorbibnamehash}{bb279c2b8750cd2f331793dc7a30ff7a}
+      \strng{authornamehash}{bb279c2b8750cd2f331793dc7a30ff7a}
+      \strng{authorfullhash}{2990130be057668a8a2e67eb622ca143}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Robust statistics: the approach based on influence functions}
+      \field{year}{1986}
     \endentry
   \enddatalist
 \endrefsection
