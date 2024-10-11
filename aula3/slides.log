@@ -1550,7 +1550,7 @@ LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <9> not available
 [6
 
 ]
-<graficos/naive.png, id=75, 367.3725pt x 307.1475pt>
+<graficos/naive.png, id=79, 367.3725pt x 307.1475pt>
 File: graficos/naive.png Graphic file (type png)
 <use graficos/naive.png>
 Package pdftex.def Info: graficos/naive.png  used on input line 200.
@@ -1579,7 +1579,7 @@ Overfull \vbox (6.71751pt too high) detected at line 267
 ] [13
 
 ]
-Overfull \vbox (3.0541pt too high) detected at line 316
+Overfull \vbox (2.44582pt too high) detected at line 316
  []
 
 [14
@@ -1612,16 +1612,16 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 
  (./slides.aux)
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 72369A70582F08AEEDC45B9D0750298C;101.
+(rerunfilecheck)             Checksum: 93AAE74C7C9D177DFE421A3AFA5CD24D;193.
 Package logreq Info: Writing requests to 'slides.run.xml'.
 \openout1 = `slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44208 strings out of 476025
- 1026077 string characters out of 5790017
+ 44220 strings out of 476025
+ 1026185 string characters out of 5790017
  1868388 words of memory out of 5000000
- 63834 multiletter control sequences out of 15000+600000
+ 63845 multiletter control sequences out of 15000+600000
  614346 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,122p,2774b,1784s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1649,10 +1649,10 @@ pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
 m7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on slides.pdf (18 pages, 383001 bytes).
+Output written on slides.pdf (18 pages, 382908 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 64 words of extra memory for PDF output out of 10000 (max. 10000000)
 

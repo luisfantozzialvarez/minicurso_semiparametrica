@@ -300,7 +300,7 @@ uniquename=false,
 \begin{itemize}
 	\item A condição de momento modificada é localmente robusta a ``'vieses'' na estimação não paramétrica da primeira etapa, no sentido que:
 	$$\frac{d}{d \tau} \mathbb{E}[m(S;\gamma(P_{\tau})) + \psi(s;P_{\tau})]\Big|_{\tau=0} = 0$$
-	\item Metodologia de \cite{Chernozhukov2018}, particione amostra em $\mathcal{I}_1$ e $\mathcal{i}_2$, com tamanhos aproximadamente iguais.
+	\item Metodologia de \cite{Chernozhukov2018}, particione amostra em $\mathcal{I}_1$ e $\mathcal{I}_2$, com tamanhos aproximadamente iguais.
 	\begin{itemize}
 		\item Na parte $\mathcal{I}_1$, estime $\gamma_0$, $\hat{\gamma}^1$ e a função influência (que no geral depende de uma parte não paramétrica), $\hat{\psi}^1$.
 		\item Na $\mathcal{I}_2$, estimar $\theta$ como:
@@ -308,7 +308,7 @@ uniquename=false,
 			\hat{\theta_2} = \frac{1}{|\mathcal{I}_2|}\sum_{i\in \mathcal{I}_2} m(S_i;\hat{\gamma}^1) + \hat{\psi}^1(S_i)
 		\end{equation}
 	\end{itemize}
-	\item Para não perder observações, podemos trocar o papel de $\mathcal{I}_1$ e $\mathcal{i}_2$, calcular $\hat{\theta_1}$ analogamente e fazer o estimador \textit{cross-fitted}:
+	\item Para não perder observações, podemos trocar o papel de $\mathcal{I}_1$ e $\mathcal{I}_2$, calcular $\hat{\theta_1}$ analogamente e fazer o estimador \textit{cross-fitted}:
 	
 	$$\hat{\theta} = \frac{1}{2} \hat{\theta_1} + \frac{1}{2} \hat{\theta_2}$$
 
@@ -326,7 +326,7 @@ uniquename=false,
 	\item Literatura enorme com extensões desse caso simples: GMM \citep{Chernozhukov2018,Chernozhukov2022},  \textit{expected shortfall }\citep{chetverikov2022weightedaverage}, entre outros.
 	\end{itemize}
 \end{frame}
-
+\appendix
 \begin{frame}[allowframebreaks]{Bibliografia}
 	\printbibliography
 	
