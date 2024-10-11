@@ -120,7 +120,7 @@
       \field{year}{1993}
     \endentry
     \entry{Chernozhukov2018}{article}{}
-      \name{author}{7}{}{%
+      \name{author}{7}{ul=2}{%
         {{hash=c75cbe2cefd1e532f636a50892605d06}{%
            family={Chernozhukov},
            familyi={C\bibinitperiod},
@@ -157,11 +157,11 @@
            given={James},
            giveni={J\bibinitperiod}}}%
       }
-      \strng{namehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{namehash}{71ae0ee9c7eaedd51e4cfcb944a5be17}
       \strng{fullhash}{7892f5fdea2b46a0fb4e6c031c27c781}
-      \strng{bibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
-      \strng{authorbibnamehash}{e8ad45c8076487daa445bfbeb4e02a04}
-      \strng{authornamehash}{e8ad45c8076487daa445bfbeb4e02a04}
+      \strng{bibnamehash}{71ae0ee9c7eaedd51e4cfcb944a5be17}
+      \strng{authorbibnamehash}{71ae0ee9c7eaedd51e4cfcb944a5be17}
+      \strng{authornamehash}{71ae0ee9c7eaedd51e4cfcb944a5be17}
       \strng{authorfullhash}{7892f5fdea2b46a0fb4e6c031c27c781}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
@@ -190,6 +190,106 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.1111/ectj.12097
+      \endverb
+    \endentry
+    \entry{Chernozhukov2022}{article}{}
+      \name{author}{5}{ul=2}{%
+        {{hash=c75cbe2cefd1e532f636a50892605d06}{%
+           family={Chernozhukov},
+           familyi={C\bibinitperiod},
+           given={Victor},
+           giveni={V\bibinitperiod}}}%
+        {{hash=cc8f476f0776f3eab4328d9dac18ae71}{%
+           family={Escanciano},
+           familyi={E\bibinitperiod},
+           given={Juan\bibnamedelima Carlos},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d0d261351e2d86ceaf41d62b7d7308f9}{%
+           family={Ichimura},
+           familyi={I\bibinitperiod},
+           given={Hidehiko},
+           giveni={H\bibinitperiod}}}%
+        {{hash=058d74ae5e89fbd5a49ebdbe97b4c922}{%
+           family={Newey},
+           familyi={N\bibinitperiod},
+           given={Whitney\bibnamedelima K.},
+           giveni={W\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=7a2ba958c4a9112b1e74732b9c35f016}{%
+           family={Robins},
+           familyi={R\bibinitperiod},
+           given={James\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{73ba1ba70a0c0927e0b940af715b1663}
+      \strng{fullhash}{87c3309f7b2604164bad0891bc515c44}
+      \strng{bibnamehash}{73ba1ba70a0c0927e0b940af715b1663}
+      \strng{authorbibnamehash}{73ba1ba70a0c0927e0b940af715b1663}
+      \strng{authornamehash}{73ba1ba70a0c0927e0b940af715b1663}
+      \strng{authorfullhash}{87c3309f7b2604164bad0891bc515c44}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Many economic and causal parameters depend on nonparametric or high dimensional first steps. We give a general construction of locally robust/orthogonal moment functions for GMM, where first steps have no effect, locally, on average moment functions. Using these orthogonal moments reduces model selection and regularization bias, as is important in many applications, especially for machine ic first steps. Also, associated standard errors are robust to misspecification when there is the same number of moment functions as parameters of interest. We use these orthogonal moments and cross-fitting to construct debiased machine learning estimators of functions of high dimensional conditional quantiles and of dynamic discrete choice parameters with high dimensional state variables. We show that additional first steps needed for the orthogonal moment functions have no effect, globally, on average orthogonal moment functions. We give a general approach to estimating those additional first steps. We characterize double robustness and give a variety of new doubly robust moment functions. We give general and simple regularity conditions for asymptotic theory.}
+      \field{journaltitle}{Econometrica}
+      \field{number}{4}
+      \field{title}{Locally Robust Semiparametric Estimation}
+      \field{volume}{90}
+      \field{year}{2022}
+      \field{pages}{1501\bibrangedash 1535}
+      \range{pages}{35}
+      \verb{doi}
+      \verb https://doi.org/10.3982/ECTA16294
+      \endverb
+      \verb{eprint}
+      \verb https://onlinelibrary.wiley.com/doi/pdf/10.3982/ECTA16294
+      \endverb
+      \verb{urlraw}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA16294
+      \endverb
+      \verb{url}
+      \verb https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA16294
+      \endverb
+      \keyw{Local robustness,orthogonal moments,double robustness,semiparametric estimation,bias,GMM}
+    \endentry
+    \entry{chetverikov2022weightedaverage}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=ef4b66d2ca2dde47ec1b0afa98306775}{%
+           family={Chetverikov},
+           familyi={C\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d46adf09de85159f9c000335d863fe4a}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yukun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=4d2683c18d6df763e9f2fa0c05f7f47c}{%
+           family={Tsyvinski},
+           familyi={T\bibinitperiod},
+           given={Aleh},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \strng{fullhash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \strng{bibnamehash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \strng{authorbibnamehash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \strng{authornamehash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \strng{authorfullhash}{717cb4e54f34598fd1cbe3648e2f9c87}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{econ.EM}
+      \field{eprinttype}{arXiv}
+      \field{title}{Weighted-average quantile regression}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2203.03032
       \endverb
     \endentry
     \entry{contaminationbias}{misc}{}

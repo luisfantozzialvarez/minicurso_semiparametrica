@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.1)  11 OCT 2024 12:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.1)  11 OCT 2024 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1579,15 +1579,25 @@ Overfull \vbox (6.71751pt too high) detected at line 267
 ] [13
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-02.
- (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
+Overfull \vbox (3.0541pt too high) detected at line 316
+ []
+
 [14
 
- </usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>] [
-15
+] [15
+
+]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+33.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) [16
+
+ </usr/local/texlive/2023/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
+[17
+
+
+] [18
 
 
 ]
@@ -1608,10 +1618,10 @@ Package logreq Info: Writing requests to 'slides.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44176 strings out of 476025
- 1025390 string characters out of 5790017
+ 44208 strings out of 476025
+ 1026077 string characters out of 5790017
  1868388 words of memory out of 5000000
- 63810 multiletter control sequences out of 15000+600000
+ 63834 multiletter control sequences out of 15000+600000
  614346 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,17n,122p,2774b,1784s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1639,10 +1649,10 @@ pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
 m7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symb
 ols/msbm7.pfb>
-Output written on slides.pdf (15 pages, 375777 bytes).
+Output written on slides.pdf (18 pages, 383001 bytes).
 PDF statistics:
- 294 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

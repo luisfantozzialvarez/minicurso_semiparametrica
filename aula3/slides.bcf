@@ -2370,6 +2370,11 @@
     <bcf:citekey order="5" intorder="2">bickel1993efficient</bcf:citekey>
     <bcf:citekey order="6" intorder="1">Ichimura2022</bcf:citekey>
     <bcf:citekey order="7" intorder="1">kennedy2023semiparametric</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Chernozhukov2018</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Chernozhukov2018</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Chernozhukov2018</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">Chernozhukov2022</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">chetverikov2022weightedaverage</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
