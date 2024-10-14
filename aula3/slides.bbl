@@ -411,6 +411,33 @@
       \verb 2203.06469
       \endverb
     \endentry
+    \entry{kreyszig1991introductory}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c4141ad87d07f41e44c31cc3b342bb04}{%
+           family={Kreyszig},
+           familyi={K\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{fullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{bibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorbibnamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authornamehash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \strng{authorfullhash}{c4141ad87d07f41e44c31cc3b342bb04}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introductory functional analysis with applications}
+      \field{volume}{17}
+      \field{year}{1991}
+    \endentry
     \entry{newey1990semiparametric}{article}{}
       \name{author}{1}{}{%
         {{hash=058d74ae5e89fbd5a49ebdbe97b4c922}{%

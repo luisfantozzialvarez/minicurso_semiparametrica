@@ -2375,6 +2375,7 @@
     <bcf:citekey order="10" intorder="1">Chernozhukov2018</bcf:citekey>
     <bcf:citekey order="10" intorder="2">Chernozhukov2022</bcf:citekey>
     <bcf:citekey order="11" intorder="1">chetverikov2022weightedaverage</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">kreyszig1991introductory</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

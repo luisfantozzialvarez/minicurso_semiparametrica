@@ -1,19 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'slides.blg'
-[89] biber-darwin:340> INFO - === Fri Oct 11, 2024, 13:17:50
-[106] Biber.pm:419> INFO - Reading 'slides.bcf'
-[203] Biber.pm:979> INFO - Found 10 citekeys in bib section 0
-[219] Biber.pm:4419> INFO - Processing section 0
-[231] Biber.pm:4610> INFO - Looking for bibtex file '../bibliography.bib' for section 0
-[237] bibtex.pm:1713> INFO - LaTeX decoding ...
-[338] bibtex.pm:1519> INFO - Found BibTeX data source '../bibliography.bib'
-[467] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[467] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
-[467] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
-[467] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
-[483] bbl.pm:660> INFO - Writing 'slides.bbl' with encoding 'UTF-8'
-[493] bbl.pm:763> INFO - Output to slides.bbl
-[493] Biber.pm:131> WARN - Duplicate entry key: 'Chen1999' in file '../bibliography.bib', skipping ...
-[493] Biber.pm:131> WARN - Duplicate entry key: 'Bickel2009' in file '../bibliography.bib', skipping ...
-[493] Biber.pm:131> WARN - Duplicate entry key: 'Farrell2021' in file '../bibliography.bib', skipping ...
-[493] Biber.pm:133> INFO - WARNINGS: 3
+[136] biber:340> INFO - === seg out 14, 2024, 14:36:07
+[161] Biber.pm:419> INFO - Reading 'slides.bcf'
+[275] Biber.pm:979> INFO - Found 11 citekeys in bib section 0
+[299] Biber.pm:4419> INFO - Processing section 0
+[316] Biber.pm:4610> INFO - Looking for bibtex file '../bibliography.bib' for section 0
+[324] bibtex.pm:1713> INFO - LaTeX decoding ...
+[450] bibtex.pm:1519> INFO - Found BibTeX data source '../bibliography.bib'
+[662] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[663] UCollate.pm:68> INFO - Overriding locale 'pt-BR' defaults 'variable = shifted' with 'variable = non-ignorable'
+[663] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'pt-BR'
+[663] Biber.pm:4245> INFO - No sort tailoring available for locale 'pt-BR'
+[691] bbl.pm:660> INFO - Writing 'slides.bbl' with encoding 'UTF-8'
+[702] bbl.pm:763> INFO - Output to slides.bbl
+[702] Biber.pm:131> WARN - Duplicate entry key: 'Chen1999' in file '../bibliography.bib', skipping ...
+[702] Biber.pm:131> WARN - Duplicate entry key: 'Bickel2009' in file '../bibliography.bib', skipping ...
+[702] Biber.pm:131> WARN - Duplicate entry key: 'Farrell2021' in file '../bibliography.bib', skipping ...
+[702] Biber.pm:133> INFO - WARNINGS: 3
